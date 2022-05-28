@@ -1,0 +1,49 @@
+% Equations with reference label
+\newcommand{\equref}[2]{
+    \begin{equation}\label{#2}
+        #1
+    \end{equation}
+}
+
+% Include grpahics in classic mode (pdf, jpg, png), ratio based
+\newcommand{\imgsrc}[4]{
+    \begin{figure}[H]
+        \centering
+        \resizebox{#4\linewidth}{!}{\includegraphics{#1}}
+        \captionsetup{width=.85\linewidth, aboveskip=10pt, justification=centering}
+        \caption{#2}
+        \label{#3}
+    \end{figure}
+}
+
+% Include two figures side by side
+\newcommand{\imgsrclr}[8]{
+    \begin{figure}[H]
+        \centering
+
+        % images
+        \begin{minipage}{.5\textwidth}
+            \centering
+            \resizebox{#7\textwidth}{!}{\includegraphics{#1}}
+        \end{minipage}%
+        \begin{minipage}{.5\textwidth}
+            \centering
+            \resizebox{#8\textwidth}{!}{\includegraphics{#2}}
+        \end{minipage}
+
+        % captions
+        \begin{minipage}[t]{.5\textwidth}
+            \captionsetup{width=.85\linewidth, aboveskip=10pt, justification=centering}
+            \caption{#3}
+            \label{#5}
+        \end{minipage}%
+        \begin{minipage}[t]{.5\textwidth}
+            \captionsetup{width=.85\linewidth, aboveskip=10pt, justification=centering}
+            \caption{#4}
+            \label{#6}
+        \end{minipage}
+    \end{figure}
+}
+
+% Increase tables' linespace
+\renewcommand{\arraystretch}{1.2}

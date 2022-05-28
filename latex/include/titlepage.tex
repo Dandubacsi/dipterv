@@ -1,0 +1,33 @@
+% turn off page numbering
+\pagenumbering{gobble}
+\hypersetup{pageanchor=false}
+
+\begin{titlepage}
+\begin{center}
+\includegraphics[width=60mm,keepaspectratio]{figures/bme_logo.pdf}\\
+\vspace{0.3cm}
+\textbf{\bme}\\
+\textmd{\vik}\\
+[5cm]
+
+\vspace{0.4cm}
+{\huge \bfseries \documentTitle}\\[0.8cm]
+\vspace{0.5cm}
+\textsc{\Large \documentDegree}\\[4cm]
+
+{
+	\renewcommand{\arraystretch}{0.85}
+	\begin{tabular}{cc}
+	 \makebox[7cm]{\emph{\madeBy}} & \makebox[7cm]{\emph{\consultant}} \\ \noalign{\smallskip}
+	 \makebox[7cm]{\documentAuthor} & \makebox[7cm]{\consultantA} \\
+	  & \makebox[7cm]{\consultantB} \\
+	\end{tabular}
+}
+
+\vfill
+\includegraphics[width=40mm,keepaspectratio]{figures/eetlogo.png}\\
+\textbf{\department}\\
+{\large \today}
+\end{center}
+\thispagestyle{empty}
+\end{titlepage}

@@ -1,0 +1,28 @@
+% setting the margins
+\geometry{top=25mm,bottom=25mm,left=35mm,right=25mm}                           % geometry for printing
+% \geometry{top=25mm,bottom=25mm,left=25mm,right=25mm}                            % geometry for online pdf
+
+% setting line spacing
+\renewcommand{\baselinestretch}{1.25}
+
+\author{\documentAuthor}
+\title{\documentTitle}
+
+\renewcommand{\captionlabelfont}{\bf}
+
+% Setup hyperref package
+\hypersetup{
+    unicode=true,                                                               % non-Latin characters in Acrobat's bookmarks
+    pdftitle={\documentTitleMeta},                                              % title
+    pdfauthor={\authorMeta},                                                    % author
+    pdfsubject={\documentType},                                                 % subject of the document
+    pdfcreator={\authorMeta},                                                   % creator of the document
+    pdfproducer={},                                                             % producer of the document
+    pdfkeywords={},                                                             % list of keywords (separate then by comma)
+    pdfnewwindow=true,                                                          % links in new window
+    colorlinks=true,                                                            % false: boxed links; true: colored links
+    linkcolor=black,                                                            % color of internal links
+    citecolor=black,                                                            % color of links to bibliography
+    filecolor=black,                                                            % color of file links
+    urlcolor=black                                                              % color of external links
+}

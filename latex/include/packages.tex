@@ -1,0 +1,47 @@
+% Used packages
+\usepackage[utf8]{inputenc}                                                     % Accept different input encodings
+\usepackage{geometry}                                                           % Flexible and complete interface to document dimensions
+\usepackage{physics}                                                            % Physical symbols like div, rot
+\usepackage{amsfonts,amsmath,amssymb}                                           % Mathematical symbols.
+\usepackage{textcomp, gensymb}                                                  % Generic symbols for both text and math mode
+\usepackage[uline]{hhtensor}                                                    % Matrix and vector sign
+\usepackage[magyar]{babel}                                                      % Multilingual support for Plain TEX or LATEX
+\usepackage{t1enc}
+
+\usepackage{graphicx}                                                           % Enhanced support for graphics
+\usepackage{booktabs}                                                           % Publication quality tables in LATEX
+\usepackage{setspace}                                                           % For setting line spacing
+\usepackage{color}                                                              % red, green, blue, yellow, cyan, magenta, black, white
+
+\usepackage[backend=biber,style=numeric,sorting=none,maxbibnames=99]{biblatex}  % Using biblatex
+\BiblatexHungarianWarningOff
+\addbibresource{bib/mybib.bib}                                                  % Bibliography source file
+
+\usepackage{csquotes}
+\usepackage{pdfpages}                                                           % Include PDF documents in LATEX
+\usepackage[unicode,pdfpagelabels,hyperindex,hyperfigures]{hyperref}            % For hyperlinks in the generated document.
+\usepackage{listings}                                                           % For code insertion
+\usepackage{caption}                                                            % For caption menagement
+\usepackage{subcaption}                                                         % For subfigure captions
+\usepackage{float}                                                              % For floating figures
+
+\usepackage{array}                                                              % For tables with fixed cell size
+
+\widowpenalty=10000                                                             % Extra penalty for breaking before last line of a paragraph
+\clubpenalty=10000                                                              % Extra penalty for breaking after first line of a paragraph
+\def\hyph{-\penalty0\hskip0pt\relax}                                            % Enable hyphenation for words including a hyphen
+\displaywidowpenalty=10000                                                      % Extra penalty for breaking before last line before a display math
+\interfootnotelinepenalty=10000                                                 % Extra value for interline penalty in footnotes
+\sloppy                                                                         % Makes TeX obey margins by stretching inter word spaces
+
+\newenvironment{nohyphens}{                                                     % disable hyphens for a paragraph
+  \par
+  \hyphenpenalty=10000
+  \exhyphenpenalty=10000
+  \sloppy                                                                       % Makes TeX obey margins by stretching inter word spaces
+}{\par}
+
+\setcounter{biburllcpenalty}{100}                                               % Enable URL breaks at lowercase letters
+\setcounter{biburlucpenalty}{100}                                               % Enable URL breaks at uppercase letters
+
+\usepackage{titlesec}                                                           % Setting the chapter's style
