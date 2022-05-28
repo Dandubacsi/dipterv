@@ -1,0 +1,121 @@
+\select@language {magyar} \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {chapter}{Kivonat}{1}{chapter*.2}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {chapter}{Abstract}{3}{chapter*.3}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {chapter}{\numberline {1}Bevezető}{5}{chapter.1}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {chapter}{\numberline {2}Mérési eljárás}{7}{chapter.2}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {section}{\numberline {2.1}Kontakt potenciál kialakulása}{7}{section.2.1}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {section}{\numberline {2.2}Kelvin-szondás mérés}{10}{section.2.2}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {chapter}{\numberline {3}Kelvin-szondás mérőfej tervezése}{12}{chapter.3}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {section}{\numberline {3.1}Tervezési és méretezési módszer}{13}{section.3.1}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {section}{\numberline {3.2}Elektromágneses modellezés}{15}{section.3.2}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.1}Egyszerűsített geometria bemutatása}{16}{subsection.3.2.1}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.2}A kialakuló elektrosztatikus tér analitikus modellje}{16}{subsection.3.2.2}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.3}Koncentrált paraméterű modell}{18}{subsection.3.2.3}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.4}Peremelem módszer}{19}{subsection.3.2.4}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.5}Elektrosztatikus fókuszálás}{21}{subsection.3.2.5}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.6}Kapacitás karakterisztikák}{23}{subsection.3.2.6}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.7}Felületi érzékenység}{24}{subsection.3.2.7}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.8}Felületi érzékenység szimulációja}{26}{subsection.3.2.8}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.9}Elektromos helyettesítőkép}{27}{subsection.3.2.9}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.10}Kimeneti jel állandósult állapota}{30}{subsection.3.2.10}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.11}Termikus zaj}{32}{subsection.3.2.11}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.12}Termikus zaj szimulációja}{34}{subsection.3.2.12}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {section}{\numberline {3.3}Termomechanikus modellezés}{35}{section.3.3}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.3.1}Termikus gerjesztés vizsgálata}{35}{subsection.3.3.1}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.3.2}Advektív tag}{36}{subsection.3.3.2}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.3.3}Termikus gerjesztés}{36}{subsection.3.3.3}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.3.4}Hőtágulás}{37}{subsection.3.3.4}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.3.5}Szinuszos állandósult állapot vizsgálata}{38}{subsection.3.3.5}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.3.6}Mechanikai rezonancia}{40}{subsection.3.3.6}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.3.7}Mechanikai elmozdulás mérése}{41}{subsection.3.3.7}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.3.8}1D Hőmérséklet-eloszlás számítása}{44}{subsection.3.3.8}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.3.9}Termoelasztikus csillapítás}{45}{subsection.3.3.9}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.3.10}Heterogén rétegszerkezet}{46}{subsection.3.3.10}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {chapter}{\numberline {4}Numerikus modellezés}{48}{chapter.4}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {section}{\numberline {4.1}COMSOL Multiphysics}{48}{section.4.1}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {4.1.1}LiveLink}{49}{subsection.4.1.1}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {section}{\numberline {4.2}Elektrosztatikus szimulációk}{49}{section.4.2}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {4.2.1}Geometria}{49}{subsection.4.2.1}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {4.2.2}Diszkretizáció}{50}{subsection.4.2.2}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {4.2.3}Fizika hozzáadása}{51}{subsection.4.2.3}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {4.2.4}A probléma megoldásához használt megoldó motor beállítása}{52}{subsection.4.2.4}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {4.2.5}Utófeldolgozás}{53}{subsection.4.2.5}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {4.2.6}Analóg méréstechnika}{56}{subsection.4.2.6}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {section}{\numberline {4.3}Termomechanikus szimulációk}{58}{section.4.3}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.1}Geometria bemutatása}{58}{subsection.4.3.1}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.2}Diszkretizáció}{60}{subsection.4.3.2}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.3}Fizika hozzáadása}{62}{subsection.4.3.3}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.4}A probléma megoldásához használt megoldó motor beállítása}{64}{subsection.4.3.4}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.5}Utófeldolgozás}{66}{subsection.4.3.5}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsubsection}{Statikus hőtágulás}{66}{subsection.4.3.5}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsubsection}{Rezonáns viselkedés vizsgálata}{68}{table.caption.46}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsubsection}{Nagyfrekvenciás hőtágulás}{69}{table.caption.48}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsubsection}{Piezorezisztív hatások}{70}{figure.caption.50}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsubsection}{Tranziens verifikáció}{72}{figure.caption.51}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.6}Mérőfejváltozatok összehasonlítása}{73}{subsection.4.3.6}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {chapter}{\numberline {5}Gyártástechnológia koncepció}{76}{chapter.5}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {chapter}{\numberline {6}Összefoglalás}{80}{chapter.6}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {chapter}{Köszönetnyílvánítás}{81}{chapter*.57}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {chapter}{Függelék}{82}{appendix*.58}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {chapter}{\'Abr\'ak jegyz\'eke}{84}{appendix*.59}%
+\defcounter {refsection}{0}\relax 
+\select@language {magyar} \contentsline {chapter}{T\'abl\'azatok jegyz\'eke}{85}{appendix*.60}%

@@ -1,0 +1,1645 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.4.13)  29 MAY 2022 01:00
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**dipterv.tex
+(./dipterv.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14>
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@chapter=\count168
+\c@section=\count169
+\c@subsection=\count170
+\c@subsubsection=\count171
+\c@paragraph=\count172
+\c@subparagraph=\count173
+\c@figure=\count174
+\c@table=\count175
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+(./include/packages.tex
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+))
+\Gm@cnth=\count176
+\Gm@cntv=\count177
+\c@Gm@tempcnt=\count178
+\Gm@bindingoffset=\dimen135
+\Gm@wd@mp=\dimen136
+\Gm@odd@mp=\dimen137
+\Gm@even@mp=\dimen138
+\Gm@layoutwidth=\dimen139
+\Gm@layoutheight=\dimen140
+\Gm@layouthoffset=\dimen141
+\Gm@layoutvoffset=\dimen142
+\Gm@dimlist=\toks17
+)
+(/usr/share/texlive/texmf-dist/tex/latex/physics/physics.sty
+Package: physics 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-02-14 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count179
+\l__pdf_internal_box=\box45
+))
+Package: xparse 2020-02-14 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count180
+\g__xparse_grabber_int=\count181
+\l__xparse_m_args_int=\count182
+\l__xparse_v_nesting_int=\count183
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen143
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen144
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count184
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count185
+\leftroot@=\count186
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count187
+\DOTSCASE@=\count188
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box46
+\strutbox@=\box47
+\big@size=\dimen145
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count189
+\c@MaxMatrixCols=\count190
+\dotsspace@=\muskip16
+\c@parentequation=\count191
+\dspbrk@lvl=\count192
+\tag@help=\toks19
+\row@=\count193
+\column@=\count194
+\maxfields@=\count195
+\andhelp@=\toks20
+\eqnshift@=\dimen146
+\alignsep@=\dimen147
+\tagshift@=\dimen148
+\tagwidth@=\dimen149
+\totwidth@=\dimen150
+\lineht@=\dimen151
+\@envbody=\toks21
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/was/gensymb.sty
+Package: gensymb 2003/07/02 v1.0 (WaS)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hhtensor/hhtensor.sty
+Package: hhtensor 2011/12/29 v0.61 Print vectors and tensors
+
+(/usr/share/texlive/texmf-dist/tex/latex/ushort/ushort.sty
+ushort.sty by M. Vaeth: Release: 2.2 
+Package: ushort 2001/06/13 v2.2
+)
+LaTeX Info: Redefining \vec on input line 40.
+) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2020/02/14 3.40 The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2020/02/14 3.40 Babel switching mechanism
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-hungarian/magyar.ldf
+Language: magyar 2019/01/14 v1.5c Magyar (Hungarian) support for babel
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2020/02/14 3.40 Babel common definitions
+\babel@savecnt=\count196
+\U@D=\dimen152
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count197
+)
+Package babel Info: Making ` an active character on input line 2819.
+\c@footnote@add=\count198
+\c@footnote@ch=\count199
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.sty
+Package: t1enc 1994/06/01 Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen153
+\Gin@req@width=\dimen154
+)
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen155
+\lightrulewidth=\dimen156
+\cmidrulewidth=\dimen157
+\belowrulesep=\dimen158
+\belowbottomsep=\dimen159
+\aboverulesep=\dimen160
+\abovetopsep=\dimen161
+\cmidrulesep=\dimen162
+\cmidrulekern=\dimen163
+\defaultaddspace=\dimen164
+\@cmidla=\count266
+\@cmidlb=\count267
+\@aboverulesep=\dimen165
+\@belowrulesep=\dimen166
+\@thisruleclass=\count268
+\@lastruleclass=\count269
+\@thisrulewidth=\dimen167
+)
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2019/12/01 v3.14 programmable bibliographies (PK/MW)
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count270
+)
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count271
+
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count272
+\c@listtotal=\count273
+\c@listcount=\count274
+\c@liststart=\count275
+\c@liststop=\count276
+\c@citecount=\count277
+\c@citetotal=\count278
+\c@multicitecount=\count279
+\c@multicitetotal=\count280
+\c@instcount=\count281
+\c@maxnames=\count282
+\c@minnames=\count283
+\c@maxitems=\count284
+\c@minitems=\count285
+\c@citecounter=\count286
+\c@maxcitecounter=\count287
+\c@savedcitecounter=\count288
+\c@uniquelist=\count289
+\c@uniquename=\count290
+\c@refsection=\count291
+\c@refsegment=\count292
+\c@maxextratitle=\count293
+\c@maxextratitleyear=\count294
+\c@maxextraname=\count295
+\c@maxextradate=\count296
+\c@maxextraalpha=\count297
+\c@abbrvpenalty=\count298
+\c@highnamepenalty=\count299
+\c@lownamepenalty=\count300
+\c@maxparens=\count301
+\c@parenlevel=\count302
+\blx@tempcnta=\count303
+\blx@tempcntb=\count304
+\blx@tempcntc=\count305
+\blx@maxsection=\count306
+\blx@maxsegment@0=\count307
+\blx@notetype=\count308
+\blx@parenlevel@text=\count309
+\blx@parenlevel@foot=\count310
+\blx@sectionciteorder@0=\count311
+\blx@entrysetcounter=\count312
+\labelnumberwidth=\skip52
+\labelalphawidth=\skip53
+\biblabelsep=\skip54
+\bibitemsep=\skip55
+\bibnamesep=\skip56
+\bibinitsep=\skip57
+\bibparsep=\skip58
+\bibhang=\skip59
+\blx@bcfin=\read3
+\blx@bcfout=\write3
+\blx@langwohyphens=\language33
+\c@mincomprange=\count313
+\c@maxcomprange=\count314
+\c@mincompwidth=\count315
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2019/12/01 v3.14 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'numeric.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count316
+\c@savedafterword=\count317
+\c@annotator=\count318
+\c@savedannotator=\count319
+\c@author=\count320
+\c@savedauthor=\count321
+\c@bookauthor=\count322
+\c@savedbookauthor=\count323
+\c@commentator=\count324
+\c@savedcommentator=\count325
+\c@editor=\count326
+\c@savededitor=\count327
+\c@editora=\count328
+\c@savededitora=\count329
+\c@editorb=\count330
+\c@savededitorb=\count331
+\c@editorc=\count332
+\c@savededitorc=\count333
+\c@foreword=\count334
+\c@savedforeword=\count335
+\c@holder=\count336
+\c@savedholder=\count337
+\c@introduction=\count338
+\c@savedintroduction=\count339
+\c@namea=\count340
+\c@savednamea=\count341
+\c@nameb=\count342
+\c@savednameb=\count343
+\c@namec=\count344
+\c@savednamec=\count345
+\c@translator=\count346
+\c@savedtranslator=\count347
+\c@shortauthor=\count348
+\c@savedshortauthor=\count349
+\c@shorteditor=\count350
+\c@savedshorteditor=\count351
+\c@labelname=\count352
+\c@savedlabelname=\count353
+\c@institution=\count354
+\c@savedinstitution=\count355
+\c@lista=\count356
+\c@savedlista=\count357
+\c@listb=\count358
+\c@savedlistb=\count359
+\c@listc=\count360
+\c@savedlistc=\count361
+\c@listd=\count362
+\c@savedlistd=\count363
+\c@liste=\count364
+\c@savedliste=\count365
+\c@listf=\count366
+\c@savedlistf=\count367
+\c@location=\count368
+\c@savedlocation=\count369
+\c@organization=\count370
+\c@savedorganization=\count371
+\c@origlocation=\count372
+\c@savedoriglocation=\count373
+\c@origpublisher=\count374
+\c@savedorigpublisher=\count375
+\c@publisher=\count376
+\c@savedpublisher=\count377
+\c@language=\count378
+\c@savedlanguage=\count379
+\c@origlanguage=\count380
+\c@savedoriglanguage=\count381
+\c@pageref=\count382
+\c@savedpageref=\count383
+\shorthandwidth=\skip60
+\shortjournalwidth=\skip61
+\shortserieswidth=\skip62
+\shorttitlewidth=\skip63
+\shortauthorwidth=\skip64
+\shorteditorwidth=\skip65
+\locallabelnumberwidth=\skip66
+\locallabelalphawidth=\skip67
+\localshorthandwidth=\skip68
+\localshortjournalwidth=\skip69
+\localshortserieswidth=\skip70
+\localshorttitlewidth=\skip71
+\localshortauthorwidth=\skip72
+\localshorteditorwidth=\skip73
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
+\c@textcitecount=\count384
+\c@textcitetotal=\count385
+\c@textcitemaxnames=\count386
+\c@biburlbigbreakpenalty=\count387
+\c@biburlbreakpenalty=\count388
+\c@biburlnumpenalty=\count389
+\c@biburlucpenalty=\count390
+\c@biburllcpenalty=\count391
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count392
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count393
+\c@bbx:relatedtotal=\count394
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2019/12/01 v3.14 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+))
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2019-12-06 v5.2j context-sensitive quotations (JAW)
+\csq@reset=\count395
+\csq@gtype=\count396
+\csq@glevel=\count397
+\csq@qlevel=\count398
+\csq@maxlvl=\count399
+\csq@tshold=\count400
+\csq@ltx@everypar=\toks23
+
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2019-12-06 v5.2j csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+))
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2020/01/28 v0.5q Insert pages of external PDF documents (AM)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count401
+\calc@Bcount=\count402
+\calc@Adimen=\dimen168
+\calc@Bdimen=\dimen169
+\calc@Askip=\skip74
+\calc@Bskip=\skip75
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count403
+\calc@Cskip=\skip76
+)
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
+
+(/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+))
+\AM@pagewidth=\dimen170
+\AM@pageheight=\dimen171
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2020/01/28 v0.5q Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box48
+\AM@global@opts=\toks24
+\AM@pagecnt=\count404
+\AM@toc@title=\toks25
+\c@AM@survey=\count405
+\AM@templatesizebox=\box49
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen172
+\Hy@linkcounter=\count406
+\Hy@pagecounter=\count407
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count408
+\pdfmajorversion=\count409
+Package hyperref Info: Option `unicode' set `true' on input line 4421.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2020/01/14 v7.00d Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `pdfpagelabels' set `true' on input line 4421.
+Package hyperref Info: Option `hyperindex' set `true' on input line 4421.
+Package hyperref Info: Option `hyperfigures' set `true' on input line 4421.
+Package hyperref Info: Hyper figures ON on input line 4545.
+Package hyperref Info: Link nesting OFF on input line 4552.
+Package hyperref Info: Hyper index ON on input line 4555.
+Package hyperref Info: Plain pages OFF on input line 4562.
+Package hyperref Info: Backreferencing OFF on input line 4567.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4800.
+\c@Hy@tempcnt=\count410
+LaTeX Info: Redefining \url on input line 5159.
+\XeTeXLinkMargin=\dimen173
+
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count411
+\Field@Width=\dimen174
+\Fld@charsize=\dimen175
+Package hyperref Info: Hyper figures ON on input line 6428.
+Package hyperref Info: Link nesting OFF on input line 6435.
+Package hyperref Info: Hyper index ON on input line 6438.
+Package hyperref Info: backreferencing OFF on input line 6445.
+Package hyperref Info: Link coloring OFF on input line 6450.
+Package hyperref Info: Link coloring with OCG OFF on input line 6455.
+Package hyperref Info: PDF/A mode OFF on input line 6460.
+LaTeX Info: Redefining \ref on input line 6500.
+LaTeX Info: Redefining \pageref on input line 6504.
+\Hy@abspage=\count412
+\c@Item=\count413
+\c@Hfootnote=\count414
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/atveryend/atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+)
+\Fld@listcount=\count415
+\c@bookmark@seq@number=\count416
+
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip77
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count417
+\lst@gtempboxa=\box50
+\lst@token=\toks26
+\lst@length=\count418
+\lst@currlwidth=\dimen176
+\lst@column=\count419
+\lst@pos=\count420
+\lst@lostspace=\dimen177
+\lst@width=\dimen178
+\lst@newlines=\count421
+\lst@lineno=\count422
+\lst@maxwidth=\dimen179
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
+\c@lstnumber=\count423
+\lst@skipnumbers=\count424
+\lst@framebox=\box51
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2019/09/10 1.8c listings configuration
+))
+Package: listings 2019/09/10 1.8c (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen180
+\captionmargin@=\dimen181
+\captionwidth=\dimen182
+\caption@tempdima=\dimen183
+\caption@indent=\dimen184
+\caption@parindent=\dimen185
+\caption@hangindent=\dimen186
+Package caption Info: Standard document class detected.
+Package caption Info: magyar babel option is loaded.
+)
+\c@caption@flags=\count425
+\c@continuedfloat=\count426
+Package caption Info: magyar babel option is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
+\c@subfigure=\count427
+\c@subtable=\count428
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count429
+\float@exts=\toks27
+\float@box=\box52
+\@float@everytoks=\toks28
+\@floatcapt=\box53
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen187
+\ar@mcellbox=\box54
+\extrarowheight=\dimen188
+\NC@list=\toks29
+\extratabsurround=\skip78
+\backup@length=\skip79
+\ar@cellbox=\box55
+))
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2019/10/16 v2.13 Sectioning titles
+\ttl@box=\box56
+\beforetitleunit=\skip80
+\aftertitleunit=\skip81
+\ttl@plus=\dimen189
+\ttl@minus=\dimen190
+\ttl@toksa=\toks30
+\titlewidth=\dimen191
+\titlewidthlast=\dimen192
+\titlewidthfirst=\dimen193
+)
+(./include/definitions.tex) (./include/commands.tex)
+(./include/pagesettings.tex
+Package hyperref Info: Option `unicode' set `true' on input line 28.
+Package hyperref Info: Option `pdfnewwindow' set `true' on input line 28.
+Package hyperref Info: Option `colorlinks' set `true' on input line 28.
+)
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'magyar'.
+ (./dipterv.aux (./include/titlepage.aux)
+(./include/declaration.aux) (./content/Abstract.aux)
+(./content/Introduction.aux) (./content/Kelvin.aux) (./content/Design.aux)
+(./content/Simulation.aux) (./content/Production.aux) (./content/Summary.aux)
+(./content/Thanks.aux) (./content/Apendix.aux))
+\openout1 = `dipterv.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(99.58464pt, 426.79135pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=702.78308pt
+* \oddsidemargin=27.31465pt
+* \evensidemargin=27.31465pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\symgns@font=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
+(Font)                  TS1/cmr/m/n --> TS1/cmr/b/n on input line 45.
+Package gensymb Info: Math companion symbols declared on input line 45.
+LaTeX Info: Redefining \degree on input line 45.
+LaTeX Info: Redefining \celsius on input line 45.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
+erthousand on input line 45.
+LaTeX Info: Redefining \ohm on input line 45.
+Package gensymb Info: Using \textohm for \ohm on input line 45.
+Package gensymb Info: Using \textmu for \micro on input line 45.
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count430
+\scratchdimen=\dimen194
+\scratchbox=\box57
+\nofMPsegments=\count431
+\nofMParguments=\count432
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count433
+\MPscratchDim=\dimen195
+\MPnumerator=\count434
+\makeMPintoPDFobject=\count435
+\everyMPtoPDFconversion=\toks32
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package biblatex Info: Trying to load language 'magyar'...
+Package biblatex Info: ... file 'magyar.lbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/magyar.lbx
+File: magyar.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `dipterv.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'dipterv.bbl' found.
+
+(./dipterv.bbl)
+Package biblatex Info: Reference section=0 on input line 45.
+Package biblatex Info: Reference segment=0 on input line 45.
+\AtBeginShipoutBox=\box58
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
+Package hyperref Info: Link coloring ON on input line 45.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count436
+)
+LaTeX Info: Redefining \ref on input line 45.
+LaTeX Info: Redefining \pageref on input line 45.
+LaTeX Info: Redefining \nameref on input line 45.
+
+(./dipterv.out) (./dipterv.out)
+\@outlinefile=\write4
+\openout4 = `dipterv.out'.
+
+\c@lstlisting=\count437
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+LaTeX Info: Redefining \cal on input line 577.
+LaTeX Info: Redefining \mit on input line 578.
+)
+\openout2 = `include/titlepage.aux'.
+
+
+(./include/titlepage.tex
+Package hyperref Info: Option `pageanchor' set `false' on input line 3.
+<figures/bme_logo.pdf, id=225, 705.63625pt x 188.705pt>
+File: figures/bme_logo.pdf Graphic file (type pdf)
+<use figures/bme_logo.pdf>
+Package pdftex.def Info: figures/bme_logo.pdf  used on input line 7.
+(pdftex.def)             Requested size: 170.71652pt x 45.65292pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 20.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 20.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+<figures/eetlogo.png, id=226, 630.85687pt x 168.63pt>
+File: figures/eetlogo.png Graphic file (type png)
+<use figures/eetlogo.png>
+Package pdftex.def Info: figures/eetlogo.png  used on input line 28.
+(pdftex.def)             Requested size: 113.81102pt x 30.42155pt.
+ [1
+
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./figures/bme_logo.pdf> <.
+/figures/eetlogo.png>]) (./dipterv.toc [1
+
+
+])
+\tf@toc=\write5
+\openout5 = `dipterv.toc'.
+
+ [2]
+\openout2 = `include/declaration.aux'.
+
+ (./include/declaration.tex
+Package hyperref Info: Option `pageanchor' set `true' on input line 30.
+) [1
+
+]
+\openout2 = `content/Abstract.aux'.
+
+
+(./content/Abstract.tex [1
+
+
+
+] [2]) [3
+
+] [4]
+\openout2 = `content/Introduction.aux'.
+
+ (./content/Introduction.tex
+1. fejezet.
+) [5
+
+
+
+] [6]
+\openout2 = `content/Kelvin.aux'.
+
+ (./content/Kelvin.tex
+2. fejezet.
+[7
+
+
+
+]
+<figures/Kelvin/initial_energy.png, id=367, 2007.5pt x 1435.3625pt>
+File: figures/Kelvin/initial_energy.png Graphic file (type png)
+<use figures/Kelvin/initial_energy.png>
+Package pdftex.def Info: figures/Kelvin/initial_energy.png  used on input line 
+18.
+(pdftex.def)             Requested size: 2007.49512pt x 1435.35901pt.
+<figures/Kelvin/equilibrium_energy.png, id=368, 2258.4375pt x 1435.3625pt>
+File: figures/Kelvin/equilibrium_energy.png Graphic file (type png)
+<use figures/Kelvin/equilibrium_energy.png>
+Package pdftex.def Info: figures/Kelvin/equilibrium_energy.png  used on input l
+ine 18.
+(pdftex.def)             Requested size: 2258.432pt x 1435.35901pt.
+ [8 <./figures/Kelvin/initial_energy.png> <./figures/Kelvin/equilibrium_energy.
+png>]
+<figures/Kelvin/electrochemical_potential.png, id=385, 2258.4375pt x 1530.71875
+pt>
+File: figures/Kelvin/electrochemical_potential.png Graphic file (type png)
+<use figures/Kelvin/electrochemical_potential.png>
+Package pdftex.def Info: figures/Kelvin/electrochemical_potential.png  used on 
+input line 26.
+(pdftex.def)             Requested size: 2258.432pt x 1530.71503pt.
+ [9 <./figures/Kelvin/electrochemical_potential.png>]
+<figures/Kelvin/measurement_sketch.png, id=397, 2163.08125pt x 1314.9125pt>
+File: figures/Kelvin/measurement_sketch.png Graphic file (type png)
+<use figures/Kelvin/measurement_sketch.png>
+Package pdftex.def Info: figures/Kelvin/measurement_sketch.png  used on input l
+ine 40.
+(pdftex.def)             Requested size: 2163.076pt x 1314.9093pt.
+ [10]) [11 <./figures/Kelvin/measurement_sketch.png>]
+\openout2 = `content/Design.aux'.
+
+ (./content/Design.tex
+3. fejezet.
+[12
+
+
+
+] [13]
+<figures/Design/method_es.png, id=435, 2238.3625pt x 2414.01875pt>
+File: figures/Design/method_es.png Graphic file (type png)
+<use figures/Design/method_es.png>
+Package pdftex.def Info: figures/Design/method_es.png  used on input line 27.
+(pdftex.def)             Requested size: 2238.35707pt x 2414.0129pt.
+<figures/Design/method_mech.png, id=436, 2414.01875pt x 2213.26875pt>
+File: figures/Design/method_mech.png Graphic file (type png)
+<use figures/Design/method_mech.png>
+Package pdftex.def Info: figures/Design/method_mech.png  used on input line 27.
+
+(pdftex.def)             Requested size: 2414.0129pt x 2213.26338pt.
+ [14] [15 <./figures/Design/method_es.png> <./figures/Design/method_mech.png>]
+<figures/Design/geometry.png, id=452, 2338.7375pt x 883.3pt>
+File: figures/Design/geometry.png Graphic file (type png)
+<use figures/Design/geometry.png>
+Package pdftex.def Info: figures/Design/geometry.png  used on input line 43.
+(pdftex.def)             Requested size: 2338.73183pt x 883.29785pt.
+ [16 <./figures/Design/geometry.png>]
+<figures/Design/point.png, id=465, 3016.26875pt x 1284.8pt>
+File: figures/Design/point.png Graphic file (type png)
+<use figures/Design/point.png>
+Package pdftex.def Info: figures/Design/point.png  used on input line 52.
+(pdftex.def)             Requested size: 3016.26144pt x 1284.79688pt.
+<figures/Design/point_mirror.png, id=466, 3016.26875pt x 1309.89375pt>
+File: figures/Design/point_mirror.png Graphic file (type png)
+<use figures/Design/point_mirror.png>
+Package pdftex.def Info: figures/Design/point_mirror.png  used on input line 52
+.
+(pdftex.def)             Requested size: 3016.26144pt x 1309.89058pt.
+ [17 <./figures/Design/point.png> <./figures/Design/point_mirror.png>] [18]
+<figures/Design/cap.png, id=496, 687.56876pt x 707.64375pt>
+File: figures/Design/cap.png Graphic file (type png)
+<use figures/Design/cap.png>
+Package pdftex.def Info: figures/Design/cap.png  used on input line 89.
+(pdftex.def)             Requested size: 687.56708pt x 707.64203pt.
+ [19 <./figures/Design/cap.png>]
+[20]
+<figures/Design/focusing.png, id=516, 2865.70625pt x 1018.80624pt>
+File: figures/Design/focusing.png Graphic file (type png)
+<use figures/Design/focusing.png>
+Package pdftex.def Info: figures/Design/focusing.png  used on input line 112.
+(pdftex.def)             Requested size: 2865.6993pt x 1018.80376pt.
+<figures/Design/tri_cap.png, id=518, 1585.925pt x 943.525pt>
+File: figures/Design/tri_cap.png Graphic file (type png)
+<use figures/Design/tri_cap.png>
+Package pdftex.def Info: figures/Design/tri_cap.png  used on input line 116.
+(pdftex.def)             Requested size: 1585.92114pt x 943.52269pt.
+ [21 <./figures/Design/focusing.png> <./figures/Design/tri_cap.png>]
+[22]
+<figures/Design/C_z.png, id=539, 1387.584pt x 660.5478pt>
+File: figures/Design/C_z.png Graphic file (type png)
+<use figures/Design/C_z.png>
+Package pdftex.def Info: figures/Design/C_z.png  used on input line 153.
+(pdftex.def)             Requested size: 1387.58061pt x 660.54619pt.
+ [23 <./figures/Design/C_z.png>]
+<figures/Design/cap_sens.png, id=546, 2158.0625pt x 1450.41875pt>
+File: figures/Design/cap_sens.png Graphic file (type png)
+<use figures/Design/cap_sens.png>
+Package pdftex.def Info: figures/Design/cap_sens.png  used on input line 162.
+(pdftex.def)             Requested size: 2158.05725pt x 1450.41522pt.
+<figures/Design/kelvin_current.png, id=547, 1861.95625pt x 1410.26875pt>
+File: figures/Design/kelvin_current.png Graphic file (type png)
+<use figures/Design/kelvin_current.png>
+Package pdftex.def Info: figures/Design/kelvin_current.png  used on input line 
+164.
+(pdftex.def)             Requested size: 1861.95172pt x 1410.26532pt.
+ [24 <./figures/Design/cap_sens.png>]
+[25 <./figures/Design/kelvin_current.png>]
+<figures/Design/sense_sim.png, id=569, 1381.0797pt x 411.939pt>
+File: figures/Design/sense_sim.png Graphic file (type png)
+<use figures/Design/sense_sim.png>
+Package pdftex.def Info: figures/Design/sense_sim.png  used on input line 188.
+(pdftex.def)             Requested size: 1381.07634pt x 411.93797pt.
+ [26]
+<figures/Design/circuit.png, id=579, 2363.83125pt x 1836.8625pt>
+File: figures/Design/circuit.png Graphic file (type png)
+<use figures/Design/circuit.png>
+Package pdftex.def Info: figures/Design/circuit.png  used on input line 196.
+(pdftex.def)             Requested size: 2363.82552pt x 1836.85803pt.
+ [27 <./figures/Design/sense_sim.png>] [28 <./figures/Design/circuit.png>] [29]
+<figures/Design/stacionary.png, id=613, 1387.584pt x 660.5478pt>
+File: figures/Design/stacionary.png Graphic file (type png)
+<use figures/Design/stacionary.png>
+Package pdftex.def Info: figures/Design/stacionary.png  used on input line 251.
+
+(pdftex.def)             Requested size: 1387.58061pt x 660.54619pt.
+ [30]
+<figures/Design/signals.png, id=625, 1387.584pt x 660.5478pt>
+File: figures/Design/signals.png Graphic file (type png)
+<use figures/Design/signals.png>
+Package pdftex.def Info: figures/Design/signals.png  used on input line 257.
+(pdftex.def)             Requested size: 1387.58061pt x 660.54619pt.
+ [31 <./figures/Design/stacionary.png>]
+<figures/Design/noise_circuit.png, id=635, 2915.89375pt x 1410.26875pt>
+File: figures/Design/noise_circuit.png Graphic file (type png)
+<use figures/Design/noise_circuit.png>
+Package pdftex.def Info: figures/Design/noise_circuit.png  used on input line 2
+67.
+(pdftex.def)             Requested size: 2915.88669pt x 1410.26532pt.
+ [32 <./figures/Design/signals.png>] [33 <./figures/Design/noise_circuit.png>]
+<figures/Design/thermal_noise.png, id=665, 1387.584pt x 660.5478pt>
+File: figures/Design/thermal_noise.png Graphic file (type png)
+<use figures/Design/thermal_noise.png>
+Package pdftex.def Info: figures/Design/thermal_noise.png  used on input line 2
+97.
+(pdftex.def)             Requested size: 1387.58061pt x 660.54619pt.
+ [34 <./figures/Design/thermal_noise.png>] [35] [36] [37]
+Underfull \hbox (badness 1142) in paragraph at lines 386--387
+\T1/cmr/m/n/12 egyen-l®-vé, így az ál-lan-dó-sult kom-po-nen-sek-re meg-ol-dan-
+dó differenciálegyenlet-
+ []
+
+[38] [39] [40] [41] [42]
+<figures/Design/piezo_measure.png, id=750, 2494.31876pt x 2077.7625pt>
+File: figures/Design/piezo_measure.png Graphic file (type png)
+<use figures/Design/piezo_measure.png>
+Package pdftex.def Info: figures/Design/piezo_measure.png  used on input line 4
+94.
+(pdftex.def)             Requested size: 2494.3127pt x 2077.75745pt.
+ [43]
+<figures/Design/1d_heat.png, id=755, 2559.5625pt x 511.9125pt>
+File: figures/Design/1d_heat.png Graphic file (type png)
+<use figures/Design/1d_heat.png>
+Package pdftex.def Info: figures/Design/1d_heat.png  used on input line 500.
+(pdftex.def)             Requested size: 2559.55629pt x 511.91125pt.
+ [44 <./figures/Design/piezo_measure.png> <./figures/Design/1d_heat.png>]
+<figures/Design/1D_heat_result.png, id=770, 1217.9904pt x 662.9568pt>
+File: figures/Design/1D_heat_result.png Graphic file (type png)
+<use figures/Design/1D_heat_result.png>
+Package pdftex.def Info: figures/Design/1D_heat_result.png  used on input line 
+518.
+(pdftex.def)             Requested size: 1217.98744pt x 662.95518pt.
+
+Underfull \hbox (badness 4120) in paragraph at lines 524--525
+[]\T1/cmr/m/n/12 A csil-la-pí-tás for-rá-sa a me-cha-ni-kai alak-vál-to-zás kö-
+vet-kez-té-ben lét-re-jö-v®
+ []
+
+[45 <./figures/Design/1D_heat_result.png (PNG copy)>]
+Underfull \hbox (badness 6157) in paragraph at lines 542--543
+[]\T1/cmr/m/n/12 A szi-mu-lá-ció so-rán a teszt-struk-tú-rát egyen-le-tes $\OT1
+/cmr/m/n/12 10[]$\T1/cmr/m/n/12 C-os h®mérséklet-
+ []
+
+[46]
+<figures/Design/Bimorph_mat_config.png, id=791, 770.88pt x 578.91281pt>
+File: figures/Design/Bimorph_mat_config.png Graphic file (type png)
+<use figures/Design/Bimorph_mat_config.png>
+Package pdftex.def Info: figures/Design/Bimorph_mat_config.png  used on input l
+ine 546.
+(pdftex.def)             Requested size: 770.87813pt x 578.91139pt.
+<figures/Design/Bimorph_results.png, id=792, 603.25375pt x 508.90125pt>
+File: figures/Design/Bimorph_results.png Graphic file (type png)
+<use figures/Design/Bimorph_results.png>
+Package pdftex.def Info: figures/Design/Bimorph_results.png  used on input line
+ 546.
+(pdftex.def)             Requested size: 603.25227pt x 508.90001pt.
+) [47 <./figures/Design/Bimorph_mat_config.png> <./figures/Design/bimorph_resul
+ts.png>]
+\openout2 = `content/Simulation.aux'.
+
+ (./content/Simulation.tex
+4. fejezet.
+[48
+
+
+
+]
+<figures/Simulation/Electrostatic/geometry.png, id=818, 774.895pt x 477.785pt>
+File: figures/Simulation/Electrostatic/geometry.png Graphic file (type png)
+<use figures/Simulation/Electrostatic/geometry.png>
+Package pdftex.def Info: figures/Simulation/Electrostatic/geometry.png  used on
+ input line 26.
+(pdftex.def)             Requested size: 774.89311pt x 477.78383pt.
+ [49] [50 <./figures/Simulation/Electrostatic/geometry.png>]
+<figures/Simulation/Electrostatic/mesh_full.png, id=832, 583.42969pt x 357.5859
+4pt>
+File: figures/Simulation/Electrostatic/mesh_full.png Graphic file (type png)
+<use figures/Simulation/Electrostatic/mesh_full.png>
+Package pdftex.def Info: figures/Simulation/Electrostatic/mesh_full.png  used o
+n input line 38.
+(pdftex.def)             Requested size: 583.42825pt x 357.58505pt.
+<figures/Simulation/Electrostatic/mesh_close.png, id=833, 583.42969pt x 357.585
+94pt>
+File: figures/Simulation/Electrostatic/mesh_close.png Graphic file (type png)
+<use figures/Simulation/Electrostatic/mesh_close.png>
+Package pdftex.def Info: figures/Simulation/Electrostatic/mesh_close.png  used 
+on input line 38.
+(pdftex.def)             Requested size: 583.42825pt x 357.58505pt.
+ [51 <./figures/Simulation/Electrostatic/mesh_full.png> <./figures/Simulation/E
+lectrostatic/mesh_close.png>] [52]
+<figures/Simulation/Electrostatic/convergence.png, id=851, 779.91376pt x 495.85
+25pt>
+File: figures/Simulation/Electrostatic/convergence.png Graphic file (type png)
+<use figures/Simulation/Electrostatic/convergence.png>
+Package pdftex.def Info: figures/Simulation/Electrostatic/convergence.png  used
+ on input line 54.
+(pdftex.def)             Requested size: 779.91187pt x 495.85129pt.
+ [53 <./figures/Simulation/Electrostatic/convergence.png>]
+<figures/Simulation/Electrostatic/unfocused_E_field.png, id=861, 579.66562pt x 
+371.13657pt>
+File: figures/Simulation/Electrostatic/unfocused_E_field.png Graphic file (type
+ png)
+<use figures/Simulation/Electrostatic/unfocused_E_field.png>
+Package pdftex.def Info: figures/Simulation/Electrostatic/unfocused_E_field.png
+  used on input line 62.
+(pdftex.def)             Requested size: 579.6642pt x 371.13565pt.
+<figures/Simulation/Electrostatic/focused_E_field.png, id=862, 579.66562pt x 37
+1.13657pt>
+File: figures/Simulation/Electrostatic/focused_E_field.png Graphic file (type p
+ng)
+<use figures/Simulation/Electrostatic/focused_E_field.png>
+Package pdftex.def Info: figures/Simulation/Electrostatic/focused_E_field.png  
+used on input line 62.
+(pdftex.def)             Requested size: 579.6642pt x 371.13565pt.
+<figures/Simulation/Electrostatic/unfocused_surface_charge_density.png, id=868,
+ 579.66562pt x 371.13657pt>
+File: figures/Simulation/Electrostatic/unfocused_surface_charge_density.png Gra
+phic file (type png)
+<use figures/Simulation/Electrostatic/unfocused_surface_charge_density.png>
+Package pdftex.def Info: figures/Simulation/Electrostatic/unfocused_surface_cha
+rge_density.png  used on input line 68.
+(pdftex.def)             Requested size: 579.6642pt x 371.13565pt.
+<figures/Simulation/Electrostatic/focused_surface_charge_density.png, id=869, 5
+77.40718pt x 371.13657pt>
+File: figures/Simulation/Electrostatic/focused_surface_charge_density.png Graph
+ic file (type png)
+<use figures/Simulation/Electrostatic/focused_surface_charge_density.png>
+Package pdftex.def Info: figures/Simulation/Electrostatic/focused_surface_charg
+e_density.png  used on input line 68.
+(pdftex.def)             Requested size: 577.40578pt x 371.13565pt.
+
+[54 <./figures/Simulation/Electrostatic/unfocused_E_field.png> <./figures/Simul
+ation/Electrostatic/focused_E_field.png> <./figures/Simulation/Electrostatic/un
+focused_surface_charge_density.png> <./figures/Simulation/Electrostatic/focused
+_surface_charge_density.png>]
+<figures/Simulation/Electrostatic/c_25.png, id=884, 1387.584pt x 660.5478pt>
+File: figures/Simulation/Electrostatic/c_25.png Graphic file (type png)
+<use figures/Simulation/Electrostatic/c_25.png>
+Package pdftex.def Info: figures/Simulation/Electrostatic/c_25.png  used on inp
+ut line 74.
+(pdftex.def)             Requested size: 1387.58061pt x 660.54619pt.
+<figures/Simulation/Electrostatic/c_50.png, id=885, 1387.584pt x 660.5478pt>
+File: figures/Simulation/Electrostatic/c_50.png Graphic file (type png)
+<use figures/Simulation/Electrostatic/c_50.png>
+Package pdftex.def Info: figures/Simulation/Electrostatic/c_50.png  used on inp
+ut line 75.
+(pdftex.def)             Requested size: 1387.58061pt x 660.54619pt.
+<figures/Simulation/Electrostatic/c_75.png, id=886, 1387.584pt x 660.5478pt>
+File: figures/Simulation/Electrostatic/c_75.png Graphic file (type png)
+<use figures/Simulation/Electrostatic/c_75.png>
+Package pdftex.def Info: figures/Simulation/Electrostatic/c_75.png  used on inp
+ut line 76.
+(pdftex.def)             Requested size: 1387.58061pt x 660.54619pt.
+ [55 <./figures/Simulation/Electrostatic/c_25.png> <./figures/Simulation/Electr
+ostatic/c_50.png>]
+<figures/Simulation/Electrostatic/focused_isosurfaces.png, id=898, 485.56406pt 
+x 322.20375pt>
+File: figures/Simulation/Electrostatic/focused_isosurfaces.png Graphic file (ty
+pe png)
+<use figures/Simulation/Electrostatic/focused_isosurfaces.png>
+Package pdftex.def Info: figures/Simulation/Electrostatic/focused_isosurfaces.p
+ng  used on input line 80.
+(pdftex.def)             Requested size: 485.56287pt x 322.20296pt.
+ [56 <./figures/Simulation/Electrostatic/c_75.png> <./figures/Simulation/Electr
+ostatic/focused_Isosurfaces.png>]
+<figures/Simulation/Electrostatic/circuit.png, id=914, 5339.95pt x 2840.6125pt>
+
+File: figures/Simulation/Electrostatic/circuit.png Graphic file (type png)
+<use figures/Simulation/Electrostatic/circuit.png>
+Package pdftex.def Info: figures/Simulation/Electrostatic/circuit.png  used on 
+input line 92.
+(pdftex.def)             Requested size: 5339.93706pt x 2840.6056pt.
+ [57 <./figures/Simulation/Electrostatic/circuit.png>] [58]
+<figures/Simulation/Thermomechanic/geometry_full.png, id=930, 383.18156pt x 279
+.29344pt>
+File: figures/Simulation/Thermomechanic/geometry_full.png Graphic file (type pn
+g)
+<use figures/Simulation/Thermomechanic/geometry_full.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/geometry_full.png  u
+sed on input line 106.
+(pdftex.def)             Requested size: 383.18062pt x 279.29276pt.
+<figures/Simulation/Thermomechanic/geometry_whole.png, id=933, 583.42969pt x 35
+7.58594pt>
+File: figures/Simulation/Thermomechanic/geometry_whole.png Graphic file (type p
+ng)
+<use figures/Simulation/Thermomechanic/geometry_whole.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/geometry_whole.png  
+used on input line 110.
+(pdftex.def)             Requested size: 583.42825pt x 357.58505pt.
+<figures/Simulation/Thermomechanic/geometry_si.png, id=934, 302.63063pt x 329.7
+3187pt>
+File: figures/Simulation/Thermomechanic/geometry_si.png Graphic file (type png)
+
+<use figures/Simulation/Thermomechanic/geometry_si.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/geometry_si.png  use
+d on input line 110.
+(pdftex.def)             Requested size: 302.62988pt x 329.73105pt.
+ [59 <./figures/Simulation/Thermomechanic/geometry_full.png> <./figures/Simulat
+ion/Thermomechanic/geometry_whole.png> <./figures/Simulation/Thermomechanic/geo
+metry_si.png>]
+<figures/Simulation/Thermomechanic/mesh_whole.png, id=947, 583.42969pt x 357.58
+594pt>
+File: figures/Simulation/Thermomechanic/mesh_whole.png Graphic file (type png)
+<use figures/Simulation/Thermomechanic/mesh_whole.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/mesh_whole.png  used
+ on input line 120.
+(pdftex.def)             Requested size: 583.42825pt x 357.58505pt.
+<figures/Simulation/Thermomechanic/mesh_close.png, id=948, 583.42969pt x 357.58
+594pt>
+File: figures/Simulation/Thermomechanic/mesh_close.png Graphic file (type png)
+<use figures/Simulation/Thermomechanic/mesh_close.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/mesh_close.png  used
+ on input line 120.
+(pdftex.def)             Requested size: 583.42825pt x 357.58505pt.
+
+[60]
+<figures/Simulation/Thermomechanic/mesh_resistor.png, id=956, 583.42969pt x 357
+.58594pt>
+File: figures/Simulation/Thermomechanic/mesh_resistor.png Graphic file (type pn
+g)
+<use figures/Simulation/Thermomechanic/mesh_resistor.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/mesh_resistor.png  u
+sed on input line 126.
+(pdftex.def)             Requested size: 583.42825pt x 357.58505pt.
+ [61 <./figures/Simulation/Thermomechanic/mesh_whole.png> <./figures/Simulation
+/Thermomechanic/mesh_close.png> <./figures/Simulation/Thermomechanic/mesh_resis
+tor.png>] [62]
+<figures/Simulation/Thermomechanic/DC_heat_expansion_settings.png, id=975, 162.
+6075pt x 258.9675pt>
+File: figures/Simulation/Thermomechanic/DC_heat_expansion_settings.png Graphic 
+file (type png)
+<use figures/Simulation/Thermomechanic/DC_heat_expansion_settings.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/DC_heat_expansion_se
+ttings.png  used on input line 138.
+(pdftex.def)             Requested size: 162.6071pt x 258.96684pt.
+<figures/Simulation/Thermomechanic/Helmholtz_settings.png, id=976, 175.40532pt 
+x 107.65219pt>
+File: figures/Simulation/Thermomechanic/Helmholtz_settings.png Graphic file (ty
+pe png)
+<use figures/Simulation/Thermomechanic/Helmholtz_settings.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/Helmholtz_settings.p
+ng  used on input line 138.
+(pdftex.def)             Requested size: 175.40488pt x 107.65192pt.
+<figures/Simulation/Thermomechanic/piezo_settings.png, id=980, 212.29312pt x 25
+7.46187pt>
+File: figures/Simulation/Thermomechanic/piezo_settings.png Graphic file (type p
+ng)
+<use figures/Simulation/Thermomechanic/piezo_settings.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/piezo_settings.png  
+used on input line 142.
+(pdftex.def)             Requested size: 212.2926pt x 257.46123pt.
+ [63 <./figures/Simulation/Thermomechanic/DC_heat_expansion_settings.png> <./fi
+gures/Simulation/Thermomechanic/Helmholtz_settings.png>]
+[64 <./figures/Simulation/Thermomechanic/piezo_settings.png>]
+<figures/Simulation/Thermomechanic/segregated_solver.png, id=996, 3894.55pt x 2
+479.2625pt>
+File: figures/Simulation/Thermomechanic/segregated_solver.png Graphic file (typ
+e png)
+<use figures/Simulation/Thermomechanic/segregated_solver.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/segregated_solver.pn
+g  used on input line 150.
+(pdftex.def)             Requested size: 3894.54056pt x 2479.25647pt.
+ [65 <./figures/Simulation/Thermomechanic/segregated_solver.png>]
+<figures/Simulation/Thermomechanic/DC_heat_distribution.png, id=1005, 484.81125
+pt x 348.55219pt>
+File: figures/Simulation/Thermomechanic/DC_heat_distribution.png Graphic file (
+type png)
+<use figures/Simulation/Thermomechanic/DC_heat_distribution.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/DC_heat_distribution
+.png  used on input line 171.
+(pdftex.def)             Requested size: 484.81006pt x 348.55132pt.
+<figures/Simulation/Thermomechanic/DC_heat_expansion.png, id=1006, 462.97969pt 
+x 225.09094pt>
+File: figures/Simulation/Thermomechanic/DC_heat_expansion.png Graphic file (typ
+e png)
+<use figures/Simulation/Thermomechanic/DC_heat_expansion.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/DC_heat_expansion.pn
+g  used on input line 172.
+(pdftex.def)             Requested size: 462.97855pt x 225.09038pt.
+ [66] [67 <./figures/Simulation/Thermomechanic/DC_heat_distribution.png> <./fig
+ures/Simulation/Thermomechanic/DC_heat_expansion.png>]
+<figures/Simulation/Thermomechanic/resonant_1.png, id=1024, 583.42969pt x 371.1
+3657pt>
+File: figures/Simulation/Thermomechanic/resonant_1.png Graphic file (type png)
+<use figures/Simulation/Thermomechanic/resonant_1.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/resonant_1.png  used
+ on input line 205.
+(pdftex.def)             Requested size: 583.42825pt x 371.13565pt.
+<figures/Simulation/Thermomechanic/resonant_2.png, id=1025, 583.42969pt x 371.1
+3657pt>
+File: figures/Simulation/Thermomechanic/resonant_2.png Graphic file (type png)
+<use figures/Simulation/Thermomechanic/resonant_2.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/resonant_2.png  used
+ on input line 205.
+(pdftex.def)             Requested size: 583.42825pt x 371.13565pt.
+ [68 <./figures/Simulation/Thermomechanic/resonant_1.png> <./figures/Simulation
+/Thermomechanic/resonant_2.png>]
+<figures/Simulation/Thermomechanic/AC_temp_field1.png, id=1042, 481.8pt x 361.3
+5pt>
+File: figures/Simulation/Thermomechanic/AC_temp_field1.png Graphic file (type p
+ng)
+<use figures/Simulation/Thermomechanic/AC_temp_field1.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/AC_temp_field1.png  
+used on input line 258.
+(pdftex.def)             Requested size: 481.79881pt x 361.34912pt.
+<figures/Simulation/Thermomechanic/Displacement_side1.png, id=1043, 564.60938pt
+ x 376.40625pt>
+File: figures/Simulation/Thermomechanic/Displacement_side1.png Graphic file (ty
+pe png)
+<use figures/Simulation/Thermomechanic/Displacement_side1.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/Displacement_side1.p
+ng  used on input line 259.
+(pdftex.def)             Requested size: 564.60799pt x 376.40532pt.
+<figures/Simulation/Thermomechanic/AC_temp_field2.png, id=1044, 481.8pt x 361.3
+5pt>
+File: figures/Simulation/Thermomechanic/AC_temp_field2.png Graphic file (type p
+ng)
+<use figures/Simulation/Thermomechanic/AC_temp_field2.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/AC_temp_field2.png  
+used on input line 260.
+(pdftex.def)             Requested size: 481.79881pt x 361.34912pt.
+<figures/Simulation/Thermomechanic/Displacement_side2.png, id=1045, 564.60938pt
+ x 376.40625pt>
+File: figures/Simulation/Thermomechanic/Displacement_side2.png Graphic file (ty
+pe png)
+<use figures/Simulation/Thermomechanic/Displacement_side2.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/Displacement_side2.p
+ng  used on input line 261.
+(pdftex.def)             Requested size: 564.60799pt x 376.40532pt.
+<figures/Simulation/Thermomechanic/AC_temp_field3.png, id=1046, 481.8pt x 361.3
+5pt>
+File: figures/Simulation/Thermomechanic/AC_temp_field3.png Graphic file (type p
+ng)
+<use figures/Simulation/Thermomechanic/AC_temp_field3.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/AC_temp_field3.png  
+used on input line 262.
+(pdftex.def)             Requested size: 481.79881pt x 361.34912pt.
+<figures/Simulation/Thermomechanic/Displacement_side3.png, id=1047, 564.60938pt
+ x 376.40625pt>
+File: figures/Simulation/Thermomechanic/Displacement_side3.png Graphic file (ty
+pe png)
+<use figures/Simulation/Thermomechanic/Displacement_side3.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/Displacement_side3.p
+ng  used on input line 263.
+(pdftex.def)             Requested size: 564.60799pt x 376.40532pt.
+<figures/Simulation/Thermomechanic/AC_temp_field4.png, id=1048, 481.8pt x 361.3
+5pt>
+File: figures/Simulation/Thermomechanic/AC_temp_field4.png Graphic file (type p
+ng)
+<use figures/Simulation/Thermomechanic/AC_temp_field4.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/AC_temp_field4.png  
+used on input line 264.
+(pdftex.def)             Requested size: 481.79881pt x 361.34912pt.
+<figures/Simulation/Thermomechanic/Displacement_side4.png, id=1049, 564.60938pt
+ x 376.40625pt>
+File: figures/Simulation/Thermomechanic/Displacement_side4.png Graphic file (ty
+pe png)
+<use figures/Simulation/Thermomechanic/Displacement_side4.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/Displacement_side4.p
+ng  used on input line 265.
+(pdftex.def)             Requested size: 564.60799pt x 376.40532pt.
+ [69]
+<figures/Simulation/Thermomechanic/Piezo_1.png, id=1059, 548.80031pt x 372.6421
+8pt>
+File: figures/Simulation/Thermomechanic/Piezo_1.png Graphic file (type png)
+<use figures/Simulation/Thermomechanic/Piezo_1.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/Piezo_1.png  used on
+ input line 277.
+(pdftex.def)             Requested size: 548.79895pt x 372.64127pt.
+<figures/Simulation/Thermomechanic/Piezo_2.png, id=1060, 548.80031pt x 372.6421
+8pt>
+File: figures/Simulation/Thermomechanic/Piezo_2.png Graphic file (type png)
+<use figures/Simulation/Thermomechanic/Piezo_2.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/Piezo_2.png  used on
+ input line 277.
+(pdftex.def)             Requested size: 548.79895pt x 372.64127pt.
+ [70 <./figures/Simulation/Thermomechanic/Piezo_1.png> <./figures/Simulation/Th
+ermomechanic/Piezo_2.png>]
+
+LaTeX Warning: Text page 71 contains only floats.
+
+[71 <./figures/Simulation/Thermomechanic/AC_temp_field1.png (PNG copy)> <./figu
+res/Simulation/Thermomechanic/Displacement_side1.png (PNG copy)> <./figures/Sim
+ulation/Thermomechanic/AC_temp_field2.png (PNG copy)> <./figures/Simulation/The
+rmomechanic/Displacement_side2.png (PNG copy)> <./figures/Simulation/Thermomech
+anic/AC_temp_field3.png (PNG copy)> <./figures/Simulation/Thermomechanic/Displa
+cement_side3.png (PNG copy)> <./figures/Simulation/Thermomechanic/AC_temp_field
+4.png (PNG copy)> <./figures/Simulation/Thermomechanic/Displacement_side4.png (
+PNG copy)>]
+<figures/Simulation/Thermomechanic/transient_full.png, id=1077, 830.10126pt x 5
+86.19pt>
+File: figures/Simulation/Thermomechanic/transient_full.png Graphic file (type p
+ng)
+<use figures/Simulation/Thermomechanic/transient_full.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/transient_full.png  
+used on input line 289.
+(pdftex.def)             Requested size: 830.09924pt x 586.18857pt.
+<figures/Simulation/Thermomechanic/transient_small.png, id=1078, 572.1375pt x 5
+63.10374pt>
+File: figures/Simulation/Thermomechanic/transient_small.png Graphic file (type 
+png)
+<use figures/Simulation/Thermomechanic/transient_small.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/transient_small.png 
+ used on input line 290.
+(pdftex.def)             Requested size: 572.1361pt x 563.10237pt.
+<figures/Simulation/Thermomechanic/transient_large.png, id=1079, 527.9725pt x 5
+72.1375pt>
+File: figures/Simulation/Thermomechanic/transient_large.png Graphic file (type 
+png)
+<use figures/Simulation/Thermomechanic/transient_large.png>
+Package pdftex.def Info: figures/Simulation/Thermomechanic/transient_large.png 
+ used on input line 290.
+(pdftex.def)             Requested size: 527.9712pt x 572.1361pt.
+ [72] [73 <./figures/Simulation/Thermomechanic/transient_full.png> <./figures/S
+imulation/Thermomechanic/transient_small.png> <./figures/Simulation/Thermomecha
+nic/transient_large.png>] [74]) [75]
+\openout2 = `content/Production.aux'.
+
+ (./content/Production.tex
+5. fejezet.
+[76
+
+
+
+] [77]
+<figures/Production/manufacturing.png, id=1128, 5902.05pt x 12717.5125pt>
+File: figures/Production/manufacturing.png Graphic file (type png)
+<use figures/Production/manufacturing.png>
+Package pdftex.def Info: figures/Production/manufacturing.png  used on input li
+ne 32.
+(pdftex.def)             Requested size: 5902.03569pt x 12717.48167pt.
+) [78] [79 <./figures/Production/manufacturing.png>]
+\openout2 = `content/Summary.aux'.
+
+
+(./content/Summary.tex
+6. fejezet.
+) [80
+
+
+
+]
+\openout2 = `content/Thanks.aux'.
+
+ (./content/Thanks.tex) [81
+
+
+
+]
+\openout2 = `content/Apendix.aux'.
+
+ (./content/Apendix.tex) [82
+
+
+
+] (./dipterv.lof
+[83
+
+
+])
+\tf@lof=\write6
+\openout6 = `dipterv.lof'.
+
+ [84] (./dipterv.lot)
+\tf@lot=\write7
+\openout7 = `dipterv.lot'.
+
+ [85
+
+]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 7
+2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+) [86
+
+] [87] [88]
+Underfull \hbox (badness 2119) in paragraph at lines 72--72
+[]\T1/cmr/m/it/12 Circuits Multi-Projects\T1/cmr/m/n/12 . \T1/cmr/m/sc/12 url\T
+1/cmr/m/n/12 : [][]$\T1/cmtt/m/n/12 h t t p s  : / / m y c m p  . f r /$[][] \T
+1/cmr/m/n/12 (el-érés dá-tu-ma
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 74.
+[89]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 74.
+ (./dipterv.aux (./include/titlepage.aux) (./include/declaration.aux)
+(./content/Abstract.aux) (./content/Introduction.aux) (./content/Kelvin.aux)
+(./content/Design.aux) (./content/Simulation.aux) (./content/Production.aux)
+(./content/Summary.aux) (./content/Thanks.aux) (./content/Apendix.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 74.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 74.
+Package rerunfilecheck Info: File `dipterv.out' has not changed.
+(rerunfilecheck)             Checksum: 344C04E495F477ADE2443D496F495138;10130.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package logreq Info: Writing requests to 'dipterv.run.xml'.
+\openout1 = `dipterv.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 25013 strings out of 482527
+ 417863 string characters out of 5948378
+ 1114075 words of memory out of 5000000
+ 39266 multiletter control sequences out of 15000+600000
+ 561249 words of font info for 96 fonts, out of 8000000 for 9000
+ 395 hyphenation exceptions out of 8191
+ 46i,23n,51p,2235b,2190s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/david_deak/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt120
+0.600pk> </home/david_deak/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/e
+ccc1200.600pk> </home/david_deak/.texlive2019/texmf-var/fonts/pk/ljfour/jknappe
+n/ec/ecbx1000.600pk> </home/david_deak/.texlive2019/texmf-var/fonts/pk/ljfour/j
+knappen/ec/ecrm1000.600pk> </home/david_deak/.texlive2019/texmf-var/fonts/pk/lj
+four/jknappen/ec/ecrm0700.600pk> </home/david_deak/.texlive2019/texmf-var/fonts
+/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/david_deak/.texlive2019/texmf-var
+/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/david_deak/.texlive2019/tex
+mf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/david_deak/.texlive20
+19/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/david_deak/.tex
+live2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/david_dea
+k/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1728.600pk> </home/dav
+id_deak/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </ho
+me/david_deak/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk
+> </home/david_deak/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200
+.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on dipterv.pdf (93 pages, 6111092 bytes).
+PDF statistics:
+ 2099 PDF objects out of 2487 (max. 8388607)
+ 1251 compressed objects within 13 object streams
+ 303 named destinations out of 1000 (max. 500000)
+ 786 words of extra memory for PDF output out of 10000 (max. 10000000)
+

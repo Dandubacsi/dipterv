@@ -1,0 +1,74 @@
+\documentclass[12pt,a4paper,oneside]{report}            % Single-side
+%\documentclass[11pt,a4paper,twoside,openright]{report} % Duplex
+
+% Document classes
+% article - For articles in scientific journals, presentations, short reports, program documentation, invitations, ...
+% report - For longer reports containing several chapters, small books, thesis, ...
+% book - For real books.
+% beamer - For writing presentations (see https://en.wikibooks.org/wiki/LaTeX/Presentations)
+
+% Document Class Options
+% 10pt, 11pt, 12pt - If no option is specified, 10pt is assumed.
+% a4paper, letterpaper,... - a5paper, b5paper, executivepaper, and legalpaper can be specified.
+% fleqn - Typesets displayed formulas left-aligned instead of centered.
+% leqno - Places the numbering of formulas on the left hand side instead of the right.
+% titlepage, notitlepage - Specifies whether a new page should be started after the document title or not.
+% twocolumn - Instructs LaTeX to typeset the document in two columns instead of one.
+% twoside, oneside - Specifies whether double or single sided output should be generated.
+% landscape - Changes the layout of the document to print in landscape mode.
+% openright, openany - Makes chapters begin either only on right hand pages or on the next page available. This does not work with the article class, as it does not know about chapters.
+
+% set the main variables
+\newcommand{\authorFamilyName}{Deák}
+\newcommand{\authorFirstName}{Elemér Dávid}
+
+\newcommand{\consultantATitle}{Dr.~}
+\newcommand{\consultantAFamilyName}{Plesz}
+\newcommand{\consultantAFirstName}{Balázs}
+
+\newcommand{\consultantBTitle}{Dr.~}
+\newcommand{\consultantBFamilyName}{Szabó}
+\newcommand{\consultantBFirstName}{Péter Gábor}
+
+% Document's title
+\newcommand{\documentTitle}{MEMS rezgőkondenzátor\\ tervezése és modellezése} % Document's title
+\newcommand{\documentTitleMeta}{MEMS rezgőkondenzátor tervezése és modellezése} % Title used as pdf metadata
+\newcommand{\department}{\bmeeet}                                               % Department
+\newcommand{\documentDegree}{\msc}                                              % Education degree \bsc or \msc
+\newcommand{\documentType}{diplomatervet}                                       % Word to insert in the student statement szakdolgozatot or diplomatervet
+
+\input{include/packages}                                                        % Main includes
+\input{include/definitions}
+\input{include/commands}
+\input{include/pagesettings.tex}
+
+\begin{document}
+
+% setting the chapter format
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hspace{10pt}{|}\hspace{10pt}}{0pt}{\Huge\bfseries}
+\titlespacing*{\chapter}{0pt}{-40pt}{20pt}
+
+\include{include/titlepage}                                                     % Titlepage
+\tableofcontents\vfill                                                          % Table of Contents
+
+\include{include/declaration}                                                   % Declaration
+
+\pagenumbering{arabic}                                                          % Turn on arabic page numbering
+\setcounter{page}{1}
+
+\include{content/Abstract}                                                      % Abstract
+\include{content/Introduction}                                                  % Main content
+\include{content/Kelvin}
+\include{content/Design}
+\include{content/Simulation}
+\include{content/Production}
+\include{content/Summary}
+\include{content/Thanks}
+\include{content/Apendix}
+
+\listoffigures\addcontentsline{toc}{chapter}{\listfigurename}                   % List of Figures, Tables
+\listoftables\addcontentsline{toc}{chapter}{\listtablename}
+
+\printbibliography[title = Irodalomjegyzék]                                     % Bibliography
+
+\end{document}

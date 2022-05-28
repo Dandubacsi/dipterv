@@ -1,0 +1,546 @@
+\chapter{Kelvin-szondás mérőfej tervezése}
+
+A Kelvin mérés megvalósításához egy változtatható kapacitás megvalósítása a cél. A kapacitás egyik fegyverzete a vizsgáló minta felülete, míg másik fegyverzetéül egy mozgatott elektróda szolgálhat. Az elektróda alakja és mérete nagymértékben meghatározza a mérőfej által vizsgált terület méretét. Minél kisebb az elektródánk, annál kisebb az interakciós térrész melyből az információ származik, valamint annál kisebbek a jelintenzitások, hiszen a kapacitás arányos a térrész térfogatával is \aref{eqn:cap_volume}. egyenletnek megfelelően.
+
+\equref{C = \frac{2\int_\Omega \vec{E}\cdot \vec{D} d\Omega}{U^2}}{eqn:cap_volume}
+
+Az egyenletben az integrállal meghatározzuk az $\Omega$ térrészben lévő elektrosztatikus energia mértékét az $\vec{E}$ és $\vec{D}$ vektorokkal, majd elosztjuk a teret létrehozó feszültség négyzetével. Az interakciós térrész csökkentésével növelhető a mérőfej felbontóképessége, hiszen vizsgált jelet csak egy szűkebb felülettel kölcsönhatva veszünk.
+
+Ezt az elvet felhasználva a mérőfej méretét nanométeres nagyságrendbe lehetett szűkíteni\cite{KPFM_1}. Ezen nagy felbontás eléréséhez szükséges a felületi topográfia feltérképezése is, ezt a mérőfej úgynevezett kopogtató üzemmódjával érik el. A mérőfej mintától mért távolságát addig csökkentik míg az a minta felületéhez nem érintkezik. A topográfiai információ begyűjtése után a mérőtűt a minta felett kis távolságban (10-100 nm) rezgetve végzik el a mérést. Ezen kis távolságok esetén a mérőtű mozgatását a mérőtűt gerjesztő AC feszültségjel és az elektrosztatikus vonzást felhasználva valósítják meg. A mérőtű mozgatására egy másik lehetőség a piezoelektromos meghajtás\cite{KPFM_2}, mely során a mérőtűt tartó konzolt egy piezoelektromos beavatkozóval rezgetik a konzol rezonanciafrekvenciáján.
+
+Ezekkel a módszerekkel akár az 1 nm-es felbontás is elérhető, azonban a mérések a több órás nagyságrendbe is eshetnek\cite{KPFM_2}. A mérési idő csökkentése érdekében a laterális felbontóképességet kell csökkentenünk, vagyis növelnünk kell a mérőfej méretét. A mérés sebességét az is gyorsítja, ha a felületről nem szükséges topográfiai információ gyűjtése, hogy a mérőfej ne ütközzön bele a mintába. Ez elérhető, ha a mérőfejet a mintától néhány 10 $\mu m$-es távolságban rezgetjük, ezzel kikerülve az esetleges pár száz nm-es felületi egyenetlenségeket.
+
+Ezeket az igényeket egy makroszkopikusan kis méretű (10 $\mu m$- 1 mm) mérőfejjel lehet elérni. A mérőfej kis méretéből adódóan előállítható olyan méretben melyben a mérőfej rezonanciafrekvenciája a 10-100 kHz-es tartományba essen, ezáltal kihasználva a rezonáns meghajtás adta lehetőségeket. Az ilyen kis méretű mechanikai szerkezetek megmunkálása precíziós műszereket és szerszámokat igényel valamint az előállításuk is költséges. Ezen nehézségeket lehet kiküszöbölni MEMS eszközök alkalmazásával. A MEMS a mikroelektromechanikai rendszerek rövidítése. Ezen eszközök a hagyományos integrált áramköri technológiákat (litográfia, diffúzió, vékony- és vastagréteg technológiák stb.) használják fel a mechanikai szerkezetek előállítására, ennek következtében a gyártásuk gyors és alacsony költségű tud lenni. Másik nagy előnye a MEMS technológiának, hogy létezik belőle CMOS kompatibilis változat is, így az elkészült mechanikai szerkezet mellé integrált áramkör is készíthető. Ez az áramkör a mechanikai szerkezet jelét dolgozza fel, így egy komplett integrált mérőrendszer valósítható meg egyetlen chip felületén.
+
+MEMS eszközök tervezése egy igen összetett, időigényes és interdiszciplináris folyamat. A tervező mérnöknek tisztában kell lennie az eszközök működésének fizikai hátterével, a gyártástechnológia által támasztott korlátokkal, valamint a méréstechnikai lehetőségekkel. Nem ritka, hogy több különböző tudományterület együttes ismerete szükséges egy-egy eszköz megtervezéséhez. Mindezekből következik, hogy MEMS eszközök fejlesztésénél nehezen definiálható egy szabványos metodika, mert minden egyes alkalmazási terület más-más igényeket támaszt az egyes megoldásokkal szemben. Nyomásmérő szenzoroknál egy vékony membrán deformációjával mérik a légnyomást, mely egyik oldalán egy konstans nyomásértéket kell tartani. Ezt a nyomást a tokozás során rögzítik az eszközben. Mikrofluidikai eszközök esetén a tokozáson be- és kimeneti csatornákat kell kialakítani, hogy a szenzor belsejébe folyadékot tudjunk juttatni. Ebből látható, hogy minden új MEMS eszköz megalkotása egyedi feladat, mely túlmutat egy szabványosnak mondható paraméterezésen, valódi innovációnak minősíthető minden egyes tervezési lépés az ötlettől a megvalósításig.
+
+A megálmodott MEMS koncepciónak megfelelően dolgozatomban elsősorban a mechanikai, elektrosztatikus és termikus fizikai térrészek csatolásával működő eszközöket mutatom be az alkalmazásnak megfelelő mélységben, de léteznek mikrofluidikai\cite{microfluidicMEMS}, kémiai\cite{chemicalMEMS} és biomechanikus\cite{bioMEMS} eszközök is, csak hogy néhány további elven működő rendszert említsek. A fizikai ágazatok ismeretén túl a tervezőnek a MEMS eszközök méréstechnikáját is ismernie kell, hiszen az eszköz méretezését jelentősen befolyásolja a szenzorból előálló jel mérhetősége valamint a szükséges jelkondicionálás és méréstechnika bonyolultsága.
+
+\section{Tervezési és méretezési módszer}
+
+Az általam kigondolt MEMS eszköz tervezését több részre bontottam. Kezdetben a kimeneti jel meghatározása volt a cél, így elektromágneses szimulációkat végeztem el, melynek eredményeként előállt a mérést végző elektróda koncentrált paraméterű modellje. A koncentrált paramétereket ismerve és az elektróda mozgatását végző mechanikai gerjesztés paramétereit feltételezve szimulálhatóvá vált a mérőfej kimeneti jele. A kimeneti jel ismeretében az elektróda méretét, valamint annak gerjesztését több iteráción keresztül állítottam, hogy a kívánt jelszintet érje el, valamint mérhető maradjon analóg CMOS elektronika felhasználásával. Ezeknél az iterációknál a 10-100 kHz közötti működési frekvencia elérése volt a cél, hiszen a mérőfej kimeneti jelének amplitúdója arányos a rezgés frekvenciájával, ahogy az \aref{eqn:i_t}. egyenletből is látható. A frekvencia mellett a rezgési amplitúdó és nyugalmi távolság beállításánál a cél a pár száz $\mu V$ és mV közötti kimeneti jelszintek elérése volt a cél.
+
+Az így beállított rezgés paraméterei (amplitúdó, frekvencia és nyugalmi távolság) adták meg a mechanikai méretezés célértékeit. A mechanikai méretezést hasonló iteratív formában végeztem el. A beavatkozó geometriáját szukcesszív módon addig változtattam, míg a szükséges mechanikai rezonanciafrekvencia és lengéskép elő nem állt. A kézi iteráció magyarázata, hogy a szükséges rezonanciafrekvencia csak nagyságrendileg kell, hogy egyezzen az elektróda méretezésénél felhasznált frekvenciával, így a gyárthatósági szempontok, névlegesen a kerek és egyszerű méretek, nagyobb hangsúlyt tudtak kapni. Az így véglegesített geometriai méretekből adódó rezonanciafrekvenciával újraszámoltam a mérőfej kimeneti jeleit, hogy meggyőződjem a rezonanciafrekvencia eltéréséből adódó elhanyagolható hibáról.
+
+Végső lépésben a beavatkozó termikus gerjesztését kellett méretezni. Ehhez a mechanikai rezonanciafrekvenciát, valamint a termikus gerjesztést előállító rezisztív hőteljesítményt használtam fel, mint bemenő paraméter. A termomechanikus szimuláció során egy linearizációt végeztem el a termikus advektív tag elhanyagolásával, így lehetővé vált egy lineáris állandósult állapot szimulálása. Ennek a módszernek köszönhetően jelentősen csökkenthetővé vált a szükséges szimulációs idő, hátránya azonban, hogy így a tényleges termikus modellt csak közelítjük. Az eredmények validációjára egy tranziens szimulációt használtam fel, melyben az említett advektív tagot is belevettem. A leírt méretezési metodikát \aref{fig:method_es}. és \aref{fig:method_mech}. ábrán szemléltettem.
+
+\imgsrclr{figures/Design/method_es.png}{figures/Design/method_mech.png}{Elektróda méretezése}{Beavatkozó méretezése}{fig:method_es}{fig:method_mech}{1}{1}
+
+A méretezés végén előáll a MEMS eszköz koncentrált elektromágneses modelljének paraméterei, a mechanikai rezonancia frekvenciái és módusai, valamint a mérőfej szenzora által mért jel feldolgozását végző áramkör területi korlátai. Ez a területi korlát a mérőelektronika mérőfejre integrálásából fakad, hiszen ezen a területen a legcélszerűbb elhelyezni a feldolgozó áramkört a jel-zaj viszony maximalizálása érdekében. Ha komplett mérőelektronika nem is lesz integrálva a mérőfej felületére, úgy ez a korlát csak az első erősítőfokozatnak szab meg egy méretkorlátot.
+
+\section{Elektromágneses modellezés}
+
+A Kelvin-szondás mérés szimulációja egy elektromágneses modell felállítását követelte meg, melyben a mérés alapját képező elektromágneses kölcsönhatást modellezzük. Ennek a kölcsönhatásnak a karakterizálásával a mérést befolyásoló alapvető paraméterek (kapacitások mértéke és a töltéseloszlások) becsülhetők. Az alkalmazni kívánt frekvenciatartomány (pár tíz kHz-től a pár száz kHz-ig) és a kívánt távolságok (pár $\mu m$-től mm-ig) lehetővé tették az elektrosztatikán alapuló modellezési eljárást. Ennek magyarázata, hogy a frekvenciatartományhoz  tartozó szabadtéri hullámhosszokhoz képest a MEMS eszköz mérettartománya elhanyagolhatóan kicsi, így az időbeli változásokból adódó elektromágneses hullámok hullámhosszánál nagyságrendekkel kisebb méretskálán, a hullám változása elhanyagolható és az elektromágneses tér konstansnak tekinthető. A hullámjelenségek elhanyagolása így nem okoz jelentős torzulást a valós és a modellezett jelenségekben. A mérési eljárás alapvetően egy kapacitív csatolás létére alapoz és nem veszi figyelembe az áramok által keltett mágneses tereket, így azokat is kihagyhatjuk az elektromágneses modellből. Ezekkel a feltételezésekkel élve egyszerűsítettem le az alkalmazott modellt egy elektrosztatikusra.
+
+Az itt bemutatott szimulációs eredményeket \aref{chap:numerical}. fejezetben mutatom be részletesen.
+
+\subsection{Egyszerűsített geometria bemutatása}
+
+Az elektrosztatikus modell és a hozzá tartozó szimulációs feladat egyszerűsítése végett első körben elhanyagoltam a rezgő elektródát mozgató MEMS eszközt és csak az elektródákra fókuszáltam. Ennek következtében a modelltér homogén anyagkitöltéssel modellezhetővé vált.
+
+A Kelvin-szondás mérés elvégzéséhez csak a vizsgált minta felülete és a méréshez használt rezgő elektróda szükséges, így a rendszert egy kételektródás modellel közelítettem. A mérés sajátosságából kifolyólag a vizsgált felület mérete nem meghatározott, így azt az analitikus számítások során végtelennek tekinthetem. Az elektróda és a minta között kialakuló elektrosztatikus tér számításához egy ponttöltés és egy végtelen kiterjedésű vezető lap által létrehozott térrel közelítettem. A döntés mellett szól, hogy a rezgőelektróda által létrehozott töltéseloszlás a minta felületén, a rezgetett elektróda alakjától gyengén függő, hengerszimmetrikus formát eredményez a minta felületén a rezgetett elektródától távol, ami jól közelíti egy ponttöltés által létrehozott teret. A mérőfej és a minta geometriai elrendezést \aref{fig:geom_sketch}. ábrán szemléltetem.
+
+\imgsrc{figures/Design/geometry.png}{Az egyszerűsített geometria modellje.}{fig:geom_sketch}{0.75}
+
+\subsection{A kialakuló elektrosztatikus tér analitikus modellje}
+\label{sec:point_charge}
+
+Az elektródák által létrehozott elektrosztatikus teret lehet analitikusan számítani konformális leképezések segítségével\cite{conformal}, azonban az így létrejövő matematikai modell túlságosan összetett, hogy számomra használható legyen. Modellezés céljából a véges méretű elektródát egy egyszerű ponttöltéssel helyettesíthetjük, a végtelen kiterjedésű mintához képest ez egy elfogadható közelítés. Az egyetlen jellemző geometriai méret tehát a ponttöltés (elektróda) és a minta közötti távolság. Jelöljük ezt a távolságot d-vel.
+
+A tér számításához feltételezzük, hogy a minta felülete ideális vezető és a potenciálja 0\footnote{Természetesen a valóságos félvezetők felülete nem ideális vezető, azonban a gyakorlatban használt tömbi félvezetők jellemzően jó vezetők. A minta felületének véges vezetőképességét egy elosztott ellenálláshálóval tudnánk modellezni, mellyel egy elosztott RC hálózatot kapnánk, ha a kapacitív és rezisztív hatásokat is figyelembe vesszük.}. Ezekkel a feltételezésekkel egy elektrosztatikus peremérték problémát tudunk definiálni. A problémát egyszerűsíti annak hengerszimmetriája, így a kialakuló tér is hengerkoordinátákba írható le a legkézenfekvőbben. A peremfeltételek érvényesítésére alkalmazzuk a töltéstükrözés módszerét\cite{elvil}, vagyis a modelltartomány peremét eltávolítjuk a modelltérből és helyette egy koncentrált töltést helyezünk el a kibővített modelltérbe úgy, hogy a peremfeltételek automatikusan teljesüljenek. Az így megvalósított töltéstükrözést \aref{fig:point}. és \aref{fig:point_mirror}. ábrán láthatjuk. A geometria szimmetriájából adódóan a tükörtöltésünket az eredeti ponttöltés vezető síkra vett tükörképébe kell helyeznünk és a töltés nagysága az eredeti töltésével megegyező, de ellentétes előjelűre kell választanunk. Az így kialakuló töltéselrendezés biztosítja, hogy a vezető sík helyén az elektrosztatikus tér potenciálja azonosan nulla legyen.
+
+\imgsrclr{figures/Design/point.png}{figures/Design/point_mirror.png}{Ponttöltés modell \\ térbeli elrendezése.}{Töltéstükrözés \\ alkalmazása.}{fig:point}{fig:point_mirror}{1}{1}
+
+Az így létrejövő konfiguráció elektromos tere könnyen számolható, ponttöltések terének szuperponálásával. Henger koordinátákkal felírva az elektrosztatikus potenciál a következő alakot ölti:
+
+\equref{\Phi(r,\theta,z) = \Phi(r,z) = \frac{Q}{4\pi\epsilon_0}\left(\frac{1}{\sqrt{(z-d)^2+r^2}}-\frac{1}{\sqrt{(z+d)^2+r^2}}\right)}{}
+
+A képletben $\it{r}$ a ponttöltéstől mért radiális távolság, $\it{z}$ a minta felületétől mért távolság, $\it{Q}$ a töltés értéke, $\it{d}$ a töltés és a minta felületének távolsága valamint $\it{\epsilon_0}$ a vákuum permittivitása. A vezető sík felületén létrejövő töltéseloszlás meghatározható az elektrosztatikus potenciálból, az elektromos eltolás normális irányú komponensének segítségével.
+
+\begin{align}
+    \begin{split}
+        \sigma(r,\theta,z) &= \sigma(r, z = 0) = D_z(r) = -\epsilon_0\partial_z\Phi(r, z)|_{z = 0} \\
+        &= -\frac{Q}{2\pi d^2}\frac{1}{(1+\frac{r^2}{d^2})^{\frac{3}{2}}}
+    \end{split}
+\end{align}
+
+A töltéseloszlás ismeretében meghatározhatjuk, hogy egy R sugarú, origó középpontú körlemezen belül a minta felületén lévő teljes töltés mekkora része található. Az integrálok egy egyszerű változócserével kiértékelhetőek.
+
+\begin{align}
+    \label{eqn:partial_q}
+    \begin{split}
+        -\frac{q(R)}{Q} &= \frac{1}{Q}\int_0^{2\pi}\int_0^R -\sigma(r)\ r\ dr d\theta\\
+        &= 1-\frac{1}{\sqrt{1+\frac{R^2}{d^2}}} = \eta
+    \end{split}
+\end{align}
+
+\Aref{eqn:partial_q}. egyenletből látható, hogy minél nagyobb körlapon integráljuk ki a töltéssűrűséget, úgy egyre közelebb kerülünk az 1-es arányhoz. A metódust megfordítva, ha előírjuk a modelltérben lévő töltések hányadát a teljes töltéshez képest - jelöljük ezt az arányt $\eta$-val - akkor kifejezhetjük a modelltér szükséges méretét, melyet felhasználhatunk a numerikus szimulációk során. Így egy kvantitatív mértéket kapunk a végtelen sík véges modelltérben történő közelítésének hibájáról.
+
+\equref{\frac{R}{d} = \sqrt{\frac{1}{(1-\eta)^2}-1}}{eqn:r_eta}
+
+\Aref{eqn:r_eta}. formulából kiszámítható, hogyha a véges modelltérbe a töltések 95$\%$-t szeretnénk helyesen modellezni, akkor a modelltér mérete a karakterisztikus távolság (d) méreténél 19.97-szer, míg 99$\%$ esetén 99.99-szer nagyobb kell legyen, melynek következtében \aref{eqn:r_eta}-es formula aszimptotikusan a $R/d \approx \frac{1}{1-\eta}$ formulával közelíthető.
+
+\Aref{eqn:r_eta} formula segítségével a numerikus számítások során szimulálhatóvá válik a végtelen sík is, azonban egyfajta pontatlanság is megjelenik az eredményekben. A numerikus számítások eredményeként kialakuló töltéseloszlás a modelltér peremén egy kiugró töltéssűrűséget fog mutatni, ugyanis a szimuláció során a modelltéren belül az össztöltésnek 0-nak kell lennie, így az eredetileg a modelltéren kívül elhelyezkedő töltéseket a numerikus megoldó a modelltér peremén halmozza fel. Az itt felhalmozódó többlettöltés mértéke elsősorban az $\eta$ értékétől függ.
+
+\subsection{Koncentrált paraméterű modell}
+
+A további modellezés során a térelméleti modellről egy koncentrált paraméterű modellre térhetünk át. Az elektrosztatikus modell eredményeiből képezhető egy kondenzátormodell, mely az elektródából és a minta felületéből áll, mint fegyverzetek és a levegőt használja, mint dielektrikum. Ugyan az így létrejövő kapacitív modell lineáris, de nem lesz időinvariáns, mivel a kondenzátor egyik fegyverzete - vagyis a mérő elektródánk - térben szinuszos rezgést végez. Az így kialakított koncentrált paraméterű modell \aref{fig:cap}. ábrán látható.
+
+\imgsrc{figures/Design/cap.png}{Koncentrált kapacitív helyettesítőkép}{fig:cap}{0.25}
+
+\subsection{Peremelem módszer}
+
+A koncentrált paraméterű modell megadásához \aref{sec:point_charge}. szakaszban ismertetett peremérték feladatot kell megoldani. A feladat megoldására több numerikus módszer is felhasználható többek között a végeselemeken és a peremelemeken alapuló eljárások is. A két módszer közötti legfőbb különbség a diszkretizáció dimenziója. Végeselem módszer\cite{fem_nonwiki} használata esetén egy háromdimenziós probléma esetén a modelltartományt háromdimenziós elemekkel (téglatest, prizma, tetraéder stb.) bontjuk kisebb részekre, így a probléma komplexitása a modelltér térfogatával arányosan nő. Ezzel ellentétben peremelem módszer esetén a háromdimenziós modellteret csak a vizsgált felületek mentén, kétdimenziós elemekkel (téglalap, háromszög stb.) osztjuk fel, így a feladat komplexitása csak a vizsgált felület felületével arányosan nő. A választás oka egyrészt a felületi hálózás előnye volt, vagyis a térbeli probléma térfogati diszkretizálása helyett elégséges a felületet diszkretizálni. A másik nagy előnye, hogy a peremérték feladat térfogata ugyan nem konkrétan meghatározott, azonban annak peremei igen. A módszer hátránya, hogy csak homogén kitöltésű közeg esetén használható\footnote{Különböző transzformációk segítségével egy inhomogén közeget tartalmazó probléma is modellezhető homogén közegekkel, de ezek a transzformációk jellemzően jól meghatározott és egyszerű közeghatárok esetén alkalmazhatóak. \cite{bilicz}}. Egy másik hátránya, hogy a diszkretizálás után létrejövő lineáris egyenletrendszer sűrű rendszermátrixot tartalmaz, így az egyenletrendszer megoldása jelentős számítási többletet igényel, összehasonlítva egy azonos számú ismeretlent tartalmazó ritka rendszermátrixból álló problémával. Ennek oka, hogy míg a végeselemeken alapuló módszer esetén az egyes elemek potenciáleloszlását csak a szomszédos elemek potenciáljai befolyásolják, addig a peremelem módszernél minden elem minden másik elem potenciáleloszlását befolyásolja.
+
+A módszer lényege, hogy nem az elektromos potenciált használja, mint alapmennyiség, hanem az elektromos töltéssűrűséget. Az elektrosztatikus peremelem problémák esetében töltések csak az elektródák felületén találhatóak, így elég csak a vezető felületeket diszkretizálni. Ezeken a felületeken különböző bázisfüggvényekkel közelítjük a töltéseloszlást, melyek általában a diszkretizációs cellára lokalizált polinomiális bázisfüggvények, tipikusan lineáris és kvadratikus függvények. A töltéseloszlás ismeretében a tér tetszőleges pontján meghatározható az elektrosztatikus potenciál a felületi töltések terének szuperponálásával.
+
+A megoldandó egyenletrendszer összeállításához a vizsgált peremek diszkrét pontjain paraméteresen meghatározzuk a potenciál értékét a többi diszkrét pontban lévő töltések segítségével. Adott bázisfüggvények és geometria esetén a töltéssűrűség felületi integrálja paraméteresen kiszámítható előre, a töltéseloszlás együtthatóinak pontos értéke nélkül, így ezek a járulékok használhatók, mint együtthatók a létrejövő lineáris egyenletrendszerben.
+
+Mivel a töltéseket a bázisfüggvények lineáris kombinációjaként írtuk fel, így a potenciálra adódó kifejezés is lineáris kombinációja lesz a töltéssűrűséget leíró lineáris összefüggés együtthatóinak. A probléma peremfeltételeit megadva egy lineáris egyenletrendszert kapunk, melynek ismeretlenei a töltéseloszlás együtthatói, az egyenletrendszer együtthatói pedig a felületi integrálokból származó járulékok. Mivel az egyes csomópontok potenciálját az összes többi töltés befolyásolja, így a létrejövő rendszermátrix úgynevezett sűrű mátrix lesz, vagyis minden sorában az elemek többsége különbözik nullától.
+
+Ezt a módszert alkalmazva a megoldásunk a felületi töltéseloszlás lesz. Ebből a koncentrált paraméterű modell számításához a kapacitás definícióját tudjuk felhasználni.
+
+\equref{C = \frac{Q}{U} = \frac{1}{U} \int_\Gamma \sigma(\vec{r})d\Gamma}{}
+
+Vagyis az elektróda teljes töltését a felületi töltéssűrűség felületi integráljaként határozzuk meg és elosztjuk a felületek között mérhető potenciálkülönbséggel. Ennek a számítási eljárásnak az előnye, hogy a kérdéses kapacitásokat integrális mennyiségekkel számítjuk, így kisebb elemszám mellett is egy numerikusan stabilabb értéket kapunk, hiszen a numerikus hibák az integrálások során kiátlagolják egymást.
+
+\subsection{Elektrosztatikus fókuszálás}
+\label{sec:focusing}
+
+\Aref{sec:point_charge}. fejezetben bemutatottak alapján sejthető, hogy az elektróda által létrehozott töltéseloszlás lokalizációja a minta felületén csak az elektróda alakjától, az elektródák közötti közegtől és az elektródák távolságától függ. MEMS technológiákon többnyire csak sík alakzatokat tudunk létrehozni, így a minta felületén kialakuló töltéseloszlás lokalizációját csak kismértékben tudjuk befolyásolni. Azért, hogy a lokalizációt növeljük a rezgő elektróda mellé fókuszáló elektródákat helyezünk el. Az így létrejövő elektródaelrendezés már több elektródával rendelkezik, így a pontos koncentrált paraméterű modellezéshez nem elegendő egyetlen kondenzátor beiktatása az elektromos modellbe. A megoldás egy kondenzátorokból álló hálózat beiktatása, mely tartalmaz egy-egy kondenzátort bármely két elektróda között. A rendszer reciprocitásából következik, hogy az i-edik és j-edik elektróda közötti kondenzátor megegyezik a j-edik és i-edik elektróda közötti kapacitással.
+
+\imgsrc{figures/Design/focusing.png}{Elektrosztatikus fókuszálás}{fig:focusing}{0.75}
+
+Az elektrosztatikus fókuszálás vázlatos rajzát \aref{fig:focusing}. ábrán szemléltetem. Itt látható, hogy a fókuszáló elektróda hatására a mérő elektródából induló és a minta felületén végződő elektromos erővonalakat beszorítottuk egy szűkebb térrészbe. A fókuszálás következtében a felületi érzékenység lokalizációja növekszik, hiszen a mért jelek jobban a mérő elektróda alá fókuszálódnak, azonban az elektrosztatikus csatolás mértéke csökken, hiszen egy szűkebb térrészben lesznek azok a töltések, melyek a mérőelektróda potenciálja miatt jönnek létre a minta felületén.
+
+\imgsrc{figures/Design/tri_cap.png}{Fókuszáló elektródával kiegészített elektrosztatikus modell}{fig:tri_cap}{0.5}
+
+Az így létrejövő - \ref{fig:tri_cap}. ábrán látható - koncentrált paraméterű modell meghatározásához ebben az esetben nem elegendő egyetlen szimuláció futtatása, mivel egynél több paramétert kell meghatározni. A kapacitások meghatározásához írjuk fel az elektródákon felhalmozódó töltések mennyiségét kihasználva a szuperpozíció elvét.
+
+\begin{align}
+    \centering
+    \begin{split}
+        Q_1 &= C_{10}(\phi_1-\phi_0)+C_{12}(\phi_1-\phi_2) \\
+        Q_2 &= C_{20}(\phi_2-\phi_0)+C_{12}(\phi_2-\phi_1) \\
+        0 &= Q_1+Q_2+Q_0
+    \end{split}
+\end{align}
+
+Az egyenletekben kihasználtam, hogy a rendszer össztöltése azonosan nulla, így a minta felületén mérhető töltésmennyiség a másik két elektróda töltéséből számítható. A kapacitások meghatározására egy lehetséges eljárás a következő. Két szimulációt futtatunk adott geometriai elrendezés mellett, az első esetén a rezgő elektróda potenciálját és a fókuszálóét egységnyinek választjuk és a minta potenciálját nullának. A második esetben csak a rezgő elektróda potenciálját választjuk egységnyinek. A szimulációk végeztével a részkapacitásokat a következő képletekkel határozhatjuk meg:
+
+\begin{align}
+    \begin{split}
+        C_{10} &= \left.\frac{Q_1}{\phi_1-\phi_0}\right\rvert_{\phi_1 = \phi_2 = 1\ V,\ \phi_0 = 0\ V}\\
+        C_{20} &= \left.\frac{Q_2}{\phi_2-\phi_0}\right\rvert_{\phi_1 = \phi_2 = 1\ V,\ \phi_0 = 0\ V}\\
+        C_{12} &= \left.\frac{Q_2}{\phi_2-\phi_1}\right\rvert_{\phi_1 = 1\ V,\ \phi_2 = \phi_0 = 0\ V}\\
+    \end{split}
+\end{align}
+
+A képletekben az 1-es index a rezgő elektródát jelenti, a 2-es index a fókuszáló elektródákat és a 0-s index a minta felületét. A számítási módból látható a peremelem módszer egyik előnye is, miszerint a 3 független részkapacitás meghatározásához elegendő volt 2 szimulációt futtatni, míg ugyanez végeselem módszert alkalmazva 3 szimulációba került volna. A különbséget az okozza, hogy míg peremelem módszer alkalmazása esetén lehetőségünk nyílik egyértelműen hozzárendelni a felületekhez a töltéseket, úgy végeselem esetén a részkapacitásokat általában az elektromos tér energiájából határozzák meg \aref{eqn:cap_energy}. formula szerint, és az elektródák közötti térrészt nem magától értetődő, hogy hogyan kell particionálni, hogy a megfelelő részkapacitásokat kapjuk.
+
+\equref{W_{el} = \frac{1}{2} C U^2 = \int_\Omega \vec{E}\cdot\vec{D} d\Omega}{eqn:cap_energy}
+
+A két szimuláció során az elektróda-elrendezéshez köthető felületi érzékenységi térképet is megkaphatjuk, a második szimuláció után, a minta felületén lévő töltéssűrűség eloszlás z irányú deriváltjának formájában. Erről bővebben \aref{sec:sensitivity}. szakaszban írok.
+
+\subsection{Kapacitás karakterisztikák}
+
+A mérőfej kapacitás karakterisztikáinak meghatározása érdekében több geometriai konfiguráció mellett kellett elvégezni az elektrosztatikus szimulációkat. Ezen konfigurációk között elsődlegesen az elektróda és a minta közötti távolság volt a különbség. Mivel a mérőfej működési frekvenciájához tartozó szabadtéri hullámhossz jóval kisebb, mint a mérőfej karakterisztikus méretskálája, így feltételezhető, hogy a rendszer statikus állapotok sorozatán keresztül végzi a működését. Ezen statikus állapotokat a mérőfej és a minta közötti távolság karakterizálja, így ennek függvényében a szimulációk során ezt a távolságot $0,5\ \mu m$-enként változtattam $10 - 50\ \mu m$-es távolság között. Ezen méretskála mellett a mérőfej kimeneti jelének szimulálása után döntöttem. Ez a méretskála jól illeszkedik a MEMS eszközök jellemző méretskálájához, valamint az ezen skálán történő rezgés elegendően erős jelet generál a jelfeldolgozó áramkör számára.
+
+A szimulációk során 3 különböző mérőfejet szimuláltam végig, ezeket a mérőelektróda oldalhossza szerint választottam. Szimuláltam $25\ \mu m$-es, $50\ \mu m$-s és  $75\ \mu m$-s oldalhosszúságú elektródát. Ezen elektródákból az $50\ \mu m$-s mutatott kellően nagy jelszintet, hogy elfogadható legyen, ugyanakkor kellően kis méretű, hogy jó felbontóképességet tudjunk elérni és kis méretű eszközt készíthessünk, melynek a szükséges tartományba esik a rezonanciafrekvenciája.
+
+Az $50\ \mu m$-s elektródamérethez tartozó kapacitásokat \aref{fig:c_z}. ábrán láthatjuk.
+
+\imgsrc{figures/Design/C_z.png}{Az elektródák kapacitáskarakterisztikái}{fig:c_z}{1}
+
+\subsection{Felületi érzékenység}
+\label{sec:sensitivity}
+
+Az elektrosztatikus szimulációk során előálló töltéseloszlások nem csak a koncentrált paraméterű modell megalkotására alkalmasak, hanem az elektróda által vizsgált felületen lévő esetleges potenciálváltozásokkal szembeni érzékenység megállapítására is. A minta felületén kialakuló töltéseloszlás alapján következtethetünk arra, hogy a mérés során vizsgált felület mely részéről érkezett a jel, vagyis hogy hol végződnek azok az erővonalak amelyek a rezgő elektródán lévő töltésektől indulnak.
+
+A felületi érzékenység meghatározásához particionáljuk a mérendő felületet diszjunkt részekre. Ezen diszjunkt felületdarabok potenciálja egymástól függetlenül szabadon változhat. Az i-edik darabon lévő töltések mennyiségét jelöljük $q_i$-vel és az i-edik darab potenciálját $\Phi_{0,i}$-vel (a 0-s elektróda i-edik darabja). Ekkor a rezgő elektródán felhalmozódó töltéseket kifejezhetjük a minta felületi potenciáljainak lineáris kombinációjával. A képletben a $C_{10,i}$ együtthatók a felület i-edik darabja és a rezgő elektróda közötti koncentrált részkapacitások.
+
+\imgsrc{figures/Design/cap_sens.png}{A minta felületéhez tartozó részkapacitások}{fig:sense}{0.75}
+
+\imgsrc{figures/Design/kelvin_current.png}{A Kelvin mérés vázlata inhomogén potenciáleloszlás esetén}{fig:kelvin_curr}{0.5}
+
+Az érzékenységek definiálásához vizsgáljuk meg \aref{fig:kelvin_curr}. ábra szerinti egyszerűsített elrendezést mely \aref{fig:sense}. ábra geometriai elrendezésének elektromos modellje. A mérési elvből adódóan a Kelvin-szondás mérés kimeneti jele a rezgő elektróda árama, ez az áram pedig a különböző időpillanatokban az elektródán lévő töltések megváltozásától függ, ez az áram kifejezhető a koncentrált részkapacitások és a felületi potenciáleloszlás ismeretében. Az áram kifejezését tovább bonthatjuk, ha figyelembe vesszük, hogy a kapacitások elsősorban az elektróda és minta közötti távolság függvényei, így alkalmazhatjuk a láncszabályt az időbeli derivált további számításához. Itt kihasználhatjuk, hogy az elektróda töltésének megváltozása során a rendszer elektrosztatikus állapotok sorozatán halad keresztül, a különböző időpillanatbeli töltéseket pedig meghatározhatjuk a koncentrált paraméterű modellből. Az egyenletben a $\bf{'}$ szimbólum a z koordináta szerinti deriváltat jelöli, míg a $\bf{\dot{}}$ szimbólum az idő szerinti deriválást rövidíti.
+
+\begin{align}\label{eqn:i_t}
+    \begin{split}
+        Q &= \sum_i C_{10,i}(U_0-\Phi_i)\\
+        i(t) &= \frac{dQ}{dt} = \sum_i \dot{C}_{10,i}(U_0-\Phi_i)\\
+        i(t) &= \frac{dz}{dt}\sum_i C^\prime_{10,i}(U_0-\Phi_i)
+    \end{split}
+\end{align}
+
+A felületi érzékenységet célszerű a rendszer be- és kimeneti mennyiségei közötti kapcsolatra definiálni, így tehát az érzékenységet a kimeneti áram és a bemeneti potenciáleloszlás megváltozásával definiálhatjuk. \Aref{eqn:sensitivity} képletben az i-edik cella érzékenysége van definiálva. A negatív előjel a töltések megváltozását kompenzálja, hiszen a felületi potenciál növelésével az adott felülethez tartozó kapacitás töltésmennyisége csökken. A képletben $\it{i}$ a kondenzátor töltőárama, $\it{\Phi_i}$ a minta felületének i-edik darabjához tartozó felületi potenciálérték, $\it{z}$ pedig a rezgő elektróda és a minta közötti távolság mértéke.
+
+\equref{S_i \stackrel{\Delta}{=} - \frac{\partial i}{\partial \Phi_i} = - \frac{d}{dt}\frac{\partial Q}{\partial \Phi_i} = - \frac{dz}{dt}C^\prime_i}{eqn:sensitivity}
+
+\Aref{eqn:i_t}. egyenletből látható, hogy az áram kifejezését szétbonthatjuk egy pusztán a gerjesztő rezgéstől és egy geometriától függő tényező szorzatára. A gerjesztő rezgést leválasztva látható, hogy az i-edik cella érzékenysége arányos a részkapacitás z koordináta szerinti deriváltjával.
+
+\equref{S_i \propto -C^\prime_i}{eqn:sens_cap}
+
+\subsection{Felületi érzékenység szimulációja}
+
+A felületi érzékenység szimulálásához megvizsgáltam a minta felületén kialakuló töltéseloszlást. A fókuszálásnak köszönhetően ez a töltésfelhő a mérő- és fókuszáló elektróda alakját jól leköveti, így egy lokalizált érzékenységi térképet kaphatunk. \Aref{eqn:sens_cap}. egyenletből jól látható, hogy a lokális felületi érzékenységek arányosak a minta adott felületéhez kapcsolt kapacitások deriváltjaival, mivel ezek a deriváltak működés közben folyton változnak, így csak a rezgési periódus kitüntetett időpillanataiban lévő értékeit ábrázoltam. A vizsgált időpillanatok a legkisebb, a közepes és a legnagyobb elektróda-minta távolságokhoz tartoznak. Ezeket az érzékenységi térképeket \aref{fig:sensitivity}. ábrán láthatjuk. Mivel az érzékenységek arányosak a kapacitások z irányú deriváltjaival, így az ábrák elkészítéséhez csak ezeket a deriváltakat értékeltem ki. A rezgetés frekvenciájával arányos rész minden felületi kapacitást azonosan skáláz - ahogy ez \aref{eqn:i_t}. egyenletben látható is - így ez a skálázási tényező elhanyagolható. A vizsgálatok során a felületi érzékenységek abszolút értékei nem relevánsak, csak azok egymáshoz viszonyított relatív eloszlásai, így az ábrák elkészítésekor az érzékenységi értékek összegét egységnyire normáltam. Az ábrákon további egyszerűsítés, hogy csak az elektródaelrendezés negyedét ábrázoltam, a nyilvánvaló X és Y tengely menti szimmetriákat kihasználva.
+
+\imgsrc{figures/Design/sense_sim.png}{A mérőfej érzékenysége a rezgés különböző fázisaiban}{fig:sensitivity}{1}
+
+\Aref{fig:sensitivity}. ábrán jól látható, hogy az elektróda által mért jel - a fókuszálásnak köszönhetően - az elektróda közvetlen környezetében összpontosul és csak egy kisebb mértékű érzékenységet mutat az elektródától távol. Az ábrákon látható raszterezettség az utófeldolgozás következménye. Az ábrák elkészítéséhez szükséges volt a minta felületén kialakuló töltéseloszlás elmentése és annak későbbi feldolgozása. Ezen kapacitások meghatározásához egy $5\ \mu m$-es rasztertávolságot választottam. Ezzel a választással az elektródák alatti töltéseloszlás viszonylag jó felbontás mellett ábrázolható, azonban elég ritka még ahhoz, hogy a szimulációk során a rasztereken belül lévő töltések kiintegrálása ne növelje feleslegesen hosszúra a szimulációs időt.
+
+\subsection{Elektromos helyettesítőkép}
+\label{chap:circuit}
+Az elektrosztatikus szimulációkat elvégezve előállítható a mérési elrendezés elektromos helyettesítőképe. A modellezés során figyelembe vettem a fókuszáló elektróda hatását is. \Aref{fig:focusing}. ábrán látható, hogy az elektrosztatikus fókuszálást akkor érjük el, ha a mérő- és fókuszáló elektródára is közel azonos potenciált kapcsolunk. Ezt úgy valósíthatjuk meg, ha a két elektródát közös feszültségforrásra kapcsoljuk, ebben az esetben viszont a mérőelektróda árama nem elkülöníthető a fókuszálás áramától. Az áramok elkülönítésére és a CMOS méréstechnikai kompatibilitás elérésére a mérő- és fókuszáló elektródák közé egy ellenállást kapcsolunk, melynek feszültségének mérésével közvetetten mérhető a mérő elektróda töltő árama. Az elrendezést \aref{fig:circuit}. ábrán láthatjuk.
+
+\imgsrc{figures/Design/circuit.png}{A mérés elektronikai modellje}{fig:circuit}{0.75}
+
+Az ábrán szemléltettem a minta felületének egyenetlen potenciáleloszlását a kondenzátorokhoz kapcsolt feszültséggenerátorokkal is. A bejelölt U feszültség mérésére alkalmazható egy CMOS műveleti erősítő, melynek bemeneteit az ellenállás két végére kötjük. CMOS technológián ezek a bemenetek tipikusan egy differenciálerősítő bemeneti tranzisztorainak gate-jei. Ennek megfelelően a modellhez hozzávettem a mérő tranzisztor gate kapacitását is, ezt az ábrán a $C_p$ kapacitás szemlélteti.
+
+Az áramkör viselkedésének leírásához készítsük el annak állapotváltozós leírását. Állapotváltozónak célszerű a mérendő U feszültséget választani, hiszen így a rendszer válasza meg fog egyezni az állapotváltozónkkal. A választást tovább indokolja, hogy az U feszültség és a felületi potenciáleloszlás ismeretében az áramkör összes feszültsége és árama egyértelműen meghatározható. Az állapotegyenlet leírásához induljunk ki az $U_0-U$ csomópontra felírt csomóponti törvényből.
+
+\equref{\frac{U}{R} + \dot{C}_{12}U+C_{12}\dot{U} = C_p\dot{U} + \sum_i \dot{C}_{10,i}(U_0-U-\phi_i) - \sum_i C_{10,i}\dot{U}}{eqn:KCL}
+
+Ezt az egyenletet átrendezve $\dot{U}$-ra megkaphatjuk a rendszer állapotváltozós leírásának normálalakját. A képletben lévő $\sum_i \dot{C_{10,i}}$-t a $\dot{C_{10}}$ rövidítéssel helyettesítettem.
+
+\equref{\dot{U} + \frac{1 + R(\dot{C}_{12}+\dot{C}_{10})}{R(C_p+C_{12}+C_{10})}U = \frac{\sum_i \dot{C}_{10,i}(U_0-\phi_i)}{C_p+C_{12}+C_{10}}}{eqn:SVD}
+
+Az állapotegyenlet egy időben változó együtthatójú, lineáris, közönséges differenciálegyenlet (ODE) melynek általános alakja: $\dot{y}(t) + f(t)y(t) = g(t)$. Az egyenletet analitikus megoldásához az integrálási faktorok módszerét használhatjuk fel\cite{integrating_factor}.
+
+\equref{y(t) = e^{-\int_0^{t} f(\tau) d\tau}\int_0^{t} e^{\int_0^{\tau} f(\lambda) d\lambda}g(\tau) d\tau + y(t=0)}{eqn:gen_sol}
+
+Az általános megoldás képletéből látszik, hogy az ilyen egyenleteket nem könnyű megoldani, így az általános megoldóképletet nem is használom fel. Mivel az állapotegyenlet lineáris, így a megoldás felírható a homogén egyenlet általános megoldásának és az inhomogén egyenlet partikuláris megoldásának összegeként. Ezeket a komponenseket szokták még szabad és gerjesztett összetevőnek, valamint tranziens és állandósult összetevőnek is nevezni.
+
+\equref{y_{\text{iá}}(t) = y_{\text{há}}(t) + y_{\text{ip}}(t)}{eqn:sol}
+
+A mérési eljárás során a mérőfej jelének állandósult állapotbeli értékére vagyunk kíváncsiak, így a szabad vagy tranziens összetevőtől eltekinthetünk. Az ODE állandósult állapotbeli megoldásának meghatározásához kihasználhatjuk, hogy \aref{eqn:SVD}. egyenletben szerepelő f(t) és g(t) függvények periodikusak, így az állandósult állapot is periodikus lesz. Ezt a periodikus állapotot pedig annak Fourier-sorával adhatjuk meg. Ha a Fourier-sorát csak véges számú (N) bázisfüggvény segítségével közelítjük, úgy az állandósult állapotot annak N pontú Diszkrét Fourier Transzformáltjával (DFT) közelítettük. Ennek a közelítésnek az általános alakja a következő:
+
+\equref{y(t) = \frac{1}{N}\sum_{k = 0}^{N-1} Y_ke^{j\frac{2\pi k}{T}t} + y_\perp(t)}{eqn:Y_DFT}
+
+Az egyenletben szereplő $y_\perp(t)$ tag az N pontú DFT-s közelítés hibája. A közelítés során az eredeti y(t) függvényt levetítettük egy N dimenziós altérre a DFT segítségével, így a hiba csak a DFT alterére merőleges komponenseket tartalmaz. \Aref{eqn:SVD}. egyenlet megoldásához meg kell határoznunk az időtartománybeli deriválás után kapott DFT-s vetületet valamint a f(t) függvénnyel vett szorzás utáni DFT vetületet. Az időbeli deriválás vetületét meghatározhatjuk az úgynevezett spektrális deriválás módszerével\cite{FFT_deriv}, a szorzat deriváltját pedig \aref{eqn:Y_DFT}. egyenletben leírt közelítés segítségével. Mindkét tag esetében a levetített spektrális komponensek az eredeti spektrális komponensek lineáris transzformáltjai lesznek, hiszen a deriválás és skalárral vett szorzás lineáris műveletek, ugyanúgy ahogy a vetítés is. Ezeket a műveleteket leírhatjuk egy D és egy F mátrixszal, ahol a D mátrix állítja elő ez y(t) spektrális komponenseiből annak deriváltjának spektrális komponenseit, F pedig a szorzattal teszi ugyanezt. Ezekkel a műveletekkel a DFT alterébe eső spektrális komponensekre a következő egyenletet írhatjuk fel, ahol Y jelöli az ismeretlen függvény spektrális komponenseinek oszlopvektorát, G pedig a gerjesztést megvalósító függvény spektrális komponenseinek oszlopvektorát.
+
+\equref{\matr{D}\vec{Y}+\matr{F}\vec{Y} = \vec{G}}{eqn:FFT_eqn}
+
+Ennek a lineáris egyenletrendszernek a megoldásával, valamint a megoldásvektor IDFT-jével (inverz DFT) megkaphatjuk a kérdéses ODE állandósult állapotához tartozó időfüggvényt. A módszer előnye, hogy az így kapott megoldás lineáris egyenletrendszer megoldásával és DFT műveletek sorozatával kapható meg, melyek nem igényelnek jelentős számítási kapacitást, valamint az így kiadódó időfüggvény a valós állandósult állapotot pontosan visszaadja N ekvidisztáns mintavételi pontban ahol a DFT hibája nulla. A módszer következtében mellékesen előáll az állandósult állapot spektruma is $\vec{Y}$ formájában, mely a későbbi jelfeldolgozási folyamatokat könnyítheti meg.
+
+\subsection{Kimeneti jel állandósult állapota}
+\label{chap:ss}
+
+Az állandósult állapot szimulálására \aref{eqn:SVD}. egyenletet kell megoldani különböző U gerjesztő feszültségekre és $\phi$ felületi potenciáleloszlásokra. A felületi potenciáleloszlások hatásának szemléltetéséért három különböző potenciáleloszlást szimuláltam le. Ezek a homogén, a potenciálugrást tartalmazó és a Gauss zajú potenciáleloszlások. Mindhárom eloszlásban közös, hogy a potenciáleloszlások 0 és 1 V közötti értékeket vehetnek csak fel. Ebből kifolyólag a gerjesztő feszültségjel szintjeit is 0 és 1 V közötti értékűre választottam. A görbék jobb áttekinthetősége végett csak 6 különböző gerjesztőfeszültséget ábrázoltam rajtuk. A szimulált feszültségjelek \aref{fig:stacionary}. ábrán láthatók.
+
+A szimulációk során az elektromos helyettesítőkép paramétereit \aref{tab:electronic_param}. táblázat alapján állítottam be.
+
+\begin{table}[!ht]
+    \centering%
+    \begin{tabular}{@{}lccc@{}}
+        \toprule
+        \textbf{paraméter neve} & \textbf{jele} & \textbf{értéke} & \textbf{mértékegysége} \\
+        \hline
+        elektróda oldalhossza   & w             & 50              & $\mu m$                \\
+        nyugalmi távolság       & $d_0$         & 30              & $\mu m$                \\
+        rezgési amplitúdó       & A             & 20              & $\mu m$                \\
+        rezgési frekvencia      & f             & 50              & kHz                    \\
+        sönt ellenállás         & R             & 4               & $M \Omega$             \\
+        parazita kapacitás      & $C_p$         & 200             & fF                     \\
+        \bottomrule
+    \end{tabular}
+    \caption{Elektromos helyettesítőkép paraméterei}
+    \label{tab:electronic_param}
+\end{table}
+
+\imgsrc{figures/Design/stacionary.png}{A mérőfej állandósult kimeneti jelei}{fig:stacionary}{1}
+
+Az első ábráról jól látható, hogyha a gerjesztő feszültséget éppen a felületi potenciállal megegyező értékűre állítjuk be, úgy a mérőfej kimenetén 0 V-s amplitúdójú feszültségjel jelenik meg. A felületi érzékenységek inhomogenitása következtében a második ábra feszültségugrása mellett nem az egyszerű számtani középen alapuló felületi potenciálérték esetén lesz minimális a kimeneti jel, hiszen a potenciáleloszlás számtani közepe 666 mV-ra adódik, mégis 166 mV-os gerjesztő jel esetén lesz a kimeneti jelváltozás minimális. A harmadik ábrán a potenciáleloszlás egy 333 mV-os várhatóértékű és 100 mV-os szórással rendelkező Gauss eloszlást követ. Ennek következtében a kimeneti jel is 333 mV mellett minimális.
+
+Összehasonlításként \aref{eqn:SVD}. egyenlet megoldható szokványos numerikus integrálás segítségével is, adott kezdeti érték felhasználásával. Erre lehetséges algoritmusai az Előre- és Hátralépő Euler módszer\cite{euler_method}. Mindkét algoritmus a következő számítási pontot egy lineáris közelítés segítségével számítja ki, csak a meredekség számításánál térnek el. Az Előrelépő módszer az adott pontban számított derivált értékét felhasználva teszi meg az integrálási lépést a következő pontig, míg a Hátralépő módszer a következő pontban értelmezett derivált értékét használja ehhez fel. Ennek köszönhetően az Előrelépő módszer explicit, míg a hátralévő implicit. A két módszer között az eltérő konvergenciatartomány is különbséget teremt, így más és más problémák esetében célszerű őket használni. A mi esetünkben az Előrelépő algoritmus numerikusan instabil volt, így a Hátralépő módszerre kellett áttérnem a szimulációk során. Az így létrejövő tranziensz jelek \aref{fig:signals_tran}. ábrán láthatók. \Aref{fig:stacionary}. ábrával összehasonlítva jól látható, hogy a tranziens megoldó a 0 V-os kezdeti értékből kiindulva egy perióduson belül felveszi az állandósult állapotbeli értékét és onnantól kezdve a két görbesereg azonos.
+
+\imgsrc{figures/Design/signals.png}{A mérőfej tranziens kimeneti jelei}{fig:signals_tran}{1}
+
+\subsection{Termikus zaj}
+
+\Aref{fig:circuit}. ábra modelljéből látható, hogy a mérés során a mérőfej kimeneti jele az R ellenálláson képződő feszültségjel. Mivel a mérés során relatíve kicsi áramok és feszültségek állnak elő, így érdemes lehet megvizsgálni a különböző zajok hatását. Az kapcsolásban zaj forrása lehet a mérőfeszültséget előállító $U_0$ értékű feszültségforrás, valamint az ellenállás. A feszültségforrás esetén a zaj kérdését elhanyagolhatjuk, hiszen ezt a feszültséget mi állítjuk elő, így szükség esetén megfelelő szűrőkapcsolással a zaj hatása kiszűrhető a kérdéses frekvenciasávokon, az ellenállás esetében nem ez a helyzet. Az ellenálláson a termikus fluktuációk következtében egy Johnson-Nyquist zaj alakul ki. Ennek a zajnak ismerjük az eloszlását, mely 0 várható értékű és $\sigma$ szórású normális eloszlás. A szórás értéke arányos az ellenállás értékével valamint a környezeti hőmérséklettel.
+
+\equref{\sigma = \sqrt{4k_BTRB}}{eqn:thermal_power}
+
+A képletben $k_B$ a Boltzmann állandó, $\it{T}$ a környezeti hőmérséklet Kelvinben, $\it{R}$ az ellenállás rezisztenciája Ohmban és $\it{B}$ az adott sávszélesség Hertzben melyet feldolgozunk. A zaj ismeretében annak a mérőjelre kifejtett hatását vizsgálhatjuk, ha a zajt az R ellenállással sorosan kötött feszültségforrással modellezzük. Mivel a modellezett kapcsolás lineáris, így használhatjuk a szuperpozíció elvét a válaszjel számításához. Ennek következtében az előző szakaszban vizsgált kapcsolás nem változik, azonban a zaj hatásának vizsgálatához egy módosított kapcsolást kell vizsgálnunk. Ezt a kapcsolást az források dezaktivizálásával kapjuk meg.
+
+\imgsrc{figures/Design/noise_circuit.png}{Termikus zaj elektromos modellje}{fig:noise_circuit}{0.75}
+
+A kapcsolásban az ellenállás zaját a vele sorba kapcsolt feszültségforrással modelleztem, így maga az ellenállás zajmentesnek tekinthető. A zajos forrás az előzőekben említett 0 várható értékű és $\sigma$ V szórású normális eloszlású fehér zajt generál. Erre a kapcsolásra is felírható annak állapotváltozós leírása az előző szakaszhoz hasonlóan.
+
+\equref{\dot{U} = -\frac{1+R(\dot{C}{12}+\dot{C}_{10})}{R(C_{12}+C_p+C_{10})} U + \frac{1}{R(C_{12}+C_p+C_{10})} U_n}{eqn:noise_SVD}
+
+\Aref{eqn:noise_SVD}. egyenlet egy lineáris sztochasztikus differenciálegyenlet, melyben az $U_n(t)$ gerjesztés egy sztochasztikus folyamat. Ennek az egyenletnek a megoldásával kapott U(t) időfüggvény egy realizációja a termikus zaj hatására létrejövő zajfeszültségnek, mely a mérőfej kimeneti feszültségére szuperponálódik. Az egyenlet formáját tekintve átírható a következő standard alakra.
+
+\equref{\dot{X}(t) = a(t)X(t)+b(t)+c(t)W(t)}{eqn:noise_SVD_std}
+
+Az egyenletben szereplő W(t) függvény a Wiener folyamat\cite{Wiener}. Az a és b együttható függvények \aref{eqn:noise_SVD}. egyenletből egyértelműen leolvashatóak (b = 0), míg c esetében \aref{eqn:noise_SVD}. egyenletből leolvasott értéket meg kell szorozni a forrás szórásával. Az így kapott egyenletet a lineáris differenciálegyenletek általános megoldásához hasonlóan oldhatjuk meg.
+
+\equref{X(t) = X(0) + e^{\int_0^t a(s) ds}\left(\int_0^t e^{-\int_0^s a(\lambda) d\lambda} b(s) ds + \int_0^t e^{-\int_0^s a(\lambda) d\lambda} c(s) dW(s)\right)}{}
+
+Az egyenlet megoldásaként kapott függvény pontos meghatározása nem cél, hiszen csak a zaj hatását szeretnénk vizsgálni. Ezt megtehetjük annak statisztikai mutatóinak meghatározásával. A megoldásként kapott U(t) függvény eloszlása egy normális eloszlás lesz, hiszen \aref{eqn:noise_SVD}. egyenletben a W(t) függvényt csak időfüggő tagokkal szoroztuk meg, így $U(t) \sim \mathcal{N}(\mu(t),V(t))$. A várható érték és variancia meghatározására felhasználhatjuk a következő differenciálegyenlet rendszert\cite{SDE}:
+
+\begin{align}\label{eqn:noise_stat}
+    \centering
+    \begin{split}
+        \dot{\mu}(t) &= a(t)\mu(t)+b(t),\ \mu(0) = X(0) = 0\\
+        \dot{V}(t) &= 2a(t)V(t) + c^2(t),\ V(0) = 0
+    \end{split}
+\end{align}
+
+Mivel a b(t) együtthatófüggvény azonosan nulla, így az első egyenlet megoldása csak annak homogén tagját tartalmazza. A homogén tag pontos meghatározásához ismerni kell az ODE kezdeti értékét, azonban ez a kezdeti érték azonos nullával, hiszen a teljes rendszer kezdeti értékét \aref{eqn:gen_sol}. egyenletben szereplő konstanssal állítjuk be. A nulla kezdeti értékű homogén ODE megoldása az azonosan nulla függvény, vagyis a mérés során a termikus zajból származó járulék nulla várható értékű lesz.
+
+\subsection{Termikus zaj szimulációja}
+
+\Aref{eqn:noise_stat}. egyenletrendszer varianciát leíró tagjának megoldása megadja a termikus zajfeszültség varianciájának időfüggését, hiszen \aref{eqn:noise_SVD}. egyenletben szereplő U(t) időfüggvény egy sztochasztikus folyamat egy lehetséges realizációja, így annak statisztikai mutatói függhetnek az időtől. A variancia meghatározására felhasználhatjuk \aref{chap:circuit}. szakaszban bemutatott spektrális módszert, mellyel az állandósult állapotbeli megoldást kaphatjuk meg. A megoldás módja azonos \aref{chap:circuit}. szakaszban leírttal, csak a benne szereplő függvények és azok DFT-i lesznek mások. A variancia meghatározásával megadható a folyamat szórása is állandósult állapotban, ennek időfüggését \aref{fig:noise_ss}. ábrán láthatjuk.
+
+\imgsrc{figures/Design/thermal_noise.png}{A termikus zaj állandósult állapotban}{fig:noise_ss}{0.5}
+
+Az ábrán látható, hogy a termikus zaj szórása egy periódus során viszonylag konstans $\approx 64\ \mu V$-os értéket vesz fel, mely igen közel van \aref{eqn:thermal_power}. egyenletből számolt értékhez. Ez a zajérték egy alsó korlátot támaszt a mérhető jeleknek, hiszen a mérés során a kimeneti jel nullaátmenetét kell érzékeljük. A számítások során 300 K-es környezeti hőmérsékletet és 100 kHz-es sávszélességgel számoltam.
+
+\section{Termomechanikus modellezés}
+
+Az eddigiekben a MEMS mérőfej elektrosztatikus viselkedését tárgyaltam a rezgetett elektródától kezdve annak elektromos helyettesítőképéig, valamint ennek a modellnek a megoldását spektrális módszerekkel. A továbbiakban a rezgést létrehozó termikus és mechanikus részeket ismertetem.
+
+MEMS eszközök esetén mechanikai mozgás létrehozására több lehetőség is a rendelkezésünkre áll. Ilyenek például az elektrosztatikus kölcsönhatáson alapuló beavatkozók\cite{bsc} vagy a statikus hőtágulás elvén működő beavatkozók\cite{thermal_MEMS} (vagy idegen szóval aktuátorok). Jellemzően a MEMS eszközök esetén az elektrosztatikus meghajtáshoz 10-200 V nagyságrendű gerjesztés kell\cite{el_stat_MEMS}, azonban ezek a feszültségszintek, és a hozzájuk tartozó elektrosztatikus terek a millivoltos nagyságrendbe eső elektromos jelek mérését zavarnák, így esett a választás a termikus úton történő gerjesztésre. Ennek vizsgálatát a következő szakaszokban tárgyalom.
+
+\subsection{Termikus gerjesztés vizsgálata}
+
+A rezgőkondenzátor meghajtását a termikus és mechanikus rendszerek közötti egyik legalapvetőbb kölcsönhatás, a hőtágulás segítségével  valósítjuk meg. Ennek áttekintéséhez vizsgáljuk meg a kölcsönhatás fizikáját.
+
+A termikus rendszer leírására a hőtranszport-egyenletet használjuk:
+
+\equref{\rho C_p \frac{\partial T}{\partial t} + \div\rho C_p T \vec{u}+ \div(-\lambda \grad T) = q}{eqn:heat_eq}
+
+Az egyenletben $\rho$ az anyag sűrűsége, $C_p$ az állandó nyomáson mért fajhő, $\vec{u}$ a közeg sebessége, míg $\lambda$ az anyag hővezető képessége. Az egyenlet jobb oldalán lévő $\it{q}$ a térfogati hőteljesítmény sűrűséget határozza meg. Az egyenlet egyes tagjai szépen illusztrálják azok fizikai tartalmát. Az első tag a térfogategységre eső hőenergia időbeli változását adja meg, a második tag a közeg mozgása által szállított hőenergiát adja meg mint hőáram a harmadik tag pedig a hővezetéssel szállított hőáramot írja le. \Aref{eqn:heat_eq}. egyenlet jól látható módon leírja a konvekciós és kondukciós hőterjedést azonban nem tér ki a sugárzással terjedő hőenergiának. Az általam használt alkalmazásban a hősugárzás nem hordoz számottevő hőenergiát, hiszen a beavatkozó hőmérséklet nem haladja majd meg a 100 $^\circ C$-s hőmérsékletet. Ha mégis szükség lenne a hősugárzás hatásának figyelembevételére, úgy az megadható egy felületi hőfluxust leíró peremfeltételként, mely arányos a felület hőmérsékletének negyedik hatványával a Stefan-Boltzmann összefüggés szerint. A felületdarabok egymás közötti hőcseréje ehhez analóg módon írható le felületi hőfluxusokkal figyelembe véve a felületdarab egymásra látásából adódó geometriai tagokat és a felületek emisszivitását és abszorpciós képességét.
+
+\subsection{Advektív tag}\label{advection}
+
+A hőtranszport-egyenletben szereplő $\div\rho Cp T \vec{u}$ tag a közeg mozgásából adódó hőáramot jelenti, vagyis a közeg mozgása által szállított hőt. Ez a tag egy csatolást hoz létre a mérőfejet leíró termikus- és elmozdulás mezők között. Az eszköz működése során a termikus mező gerjeszti a mechanikus elmozdulás mezőt, így az advektív tagban egy nemlineáris csatolás valósul meg. A méretezésnél használt szinuszos állandósult állapot így nem lenne használható, mivel nem teljesül az eszközt leíró fizikai egyenletek linearitása. Természetesen az állandósult állapotot az előző szakaszban leírt spektrális módszerrel lehetne számítani. A módszer hátránya, hogy az előálló megoldás lehetséges, hogy nem érhető el a nemlineáris rendszer adott kezdeti állapotából, így a módszer által szolgáltatott eredmény nem hordoz fizikai tartalmat. Egy másik hátránya, hogy jelenleg ez nincs implementálva az általam használt numerikus szoftverben.
+
+A nemlineáris egyenletek használatát elkerülhetjük, hogyha elhanyagoljuk az advektív tagot a hőtranszport egyenletben a tervezés során és csak a verifikációs tranziens szimulációnál vesszük ezt figyelembe.
+
+\subsection{Termikus gerjesztés}\label{heating}
+
+A hőtranszport egyenlet meghatározza az anyagon belüli hőmérséklet eloszlást (adott gerjesztés és peremfeltételek mellett), majd ez a hőmérséklet-eloszlás gerjeszti a mechanikai rendszert a konstitúciós egyenleteken keresztül.
+
+A rendszer gerjesztését egy ellenálláson disszipálódó hőteljesítménnyel, vagyis az ellenálláson keletkező Joule-hővel valósítjuk meg. Az ellenálláson fejlődő hőteljesítményt a jól ismert $P(t)\ =\ R I^2(t)$ egyenlet adja meg.
+
+Ha az ellenállást egy tisztán szinuszos áramot előállító forrásra kötjük, akkor a hőteljesítmény a következőképpen alakul.
+
+\begin{equation}
+    \begin{split}
+        I(t) = I_{ac}\ &sin(\omega_0t+\phi)\\
+        P(t) = RI_{ac}^2\ \frac{1-cos(2\omega_0t+2\phi)}{2} &= \frac{1}{2}RI_{ac}^2-\frac{1}{2}RI_{ac}^2\ cos(2\omega_0t+2\phi)
+    \end{split}
+\end{equation}
+
+Az egyenletből látható, hogy egy adott frekvenciájú szinuszosan gerjesztett termikus rendszer szétbontható két frekvenciakomponensre. Az állandó komponens egy DC hőtágulást eredményez, ez a komponens a mérőfejet feszíti elő egy adott mechanikai munkapontba. Erre az előfeszítésre szuperponálódik rá az adott munkapontban linearizált rendszer harmonikus válasza.
+
+Az ellenálláson felszabaduló hőteljesítményt a meghajtandó MEMS eszközzel vezetjük el a szenzort tartó szilíciumlapkán keresztül, ezzel hűtve az ellenállást. A számítások egyszerűsítése végett feltételezzük, hogy az ellenállás által generált hőteljesítmény teljes egésze a MEMS eszközt fűti, valamint, hogy az ellenállás nem befolyásolja jelentősen az eszköz mechanikai tulajdonságait. Ezekkel az egyszerűsítésekkel az ellenállás modellezésétől eltekinthetünk, és egy időben változó hőfluxusú peremfeltétellel helyettesíthetjük a szimulációk során.
+
+Az egyenletben szereplő $\phi$ az ellenállás áramának kezdőfázisát határozza meg. Állítva ezt a kezdőfázist lehetőségünk nyílik a termikus rendszer gerjesztéséül szolgáló hőteljesítmény kezdőfázisát állítani. Ha a gerjesztést nem egyetlen ellenállással valósítjuk meg, hanem egy ellenállás hálózattal, úgy az egyes ellenállásokra köthetünk különböző kezdőfázisú jeleket, így a hőteljesítmény időfüggvényének fázisát lokálisan is befolyásolhatjuk. Ezzel lehetőség nyílik a gerjesztés optimalizációjára is.
+
+\subsection{Hőtágulás}
+
+A hőtágulás folyamatát lineáris anyagok esetében \aref{eqn:constitutional_eq} egyenlet írja le. $\epsilon_{th}$ az alakváltozási tenzor termikus komponense, $\alpha$ a hőtágulási tenzor és $T_{ref}$ a deformálódásmentes állapothoz tartozó referencia hőmérséklet. Izotróp hőtágulást feltételezve $\alpha$ az egységmátrix skalárszorosává egyszerűsödik.
+
+\equref{\matr{\epsilon}_{th} = \matr{\alpha}(T-T_{ref})}{eqn:constitutional_eq}
+
+A hőtágulás hatására kialakuló megnyúlásokkal a mechanikai modellezésnél kompenzálnunk kell a tisztán rugalmas alakváltozásból származó megnyúlásokat, így $\matr{\epsilon}_{el} = \matr{\epsilon} - \matr{\epsilon}_{th}$ korrekcióval kell éljünk, ahol $\matr{\epsilon}$ az anyag deformációjából származó alakváltozási tenzor.
+
+Az alakváltozási tenzort az elmozdulásokból azok gradiensének segítségével számolhatjuk ki\footnote{A totális megnyúlás számolásakor nem vesszük figyelembe a testek elfordulásából származó másodrendű tagokat, így megmarad a rendszer linearitása. Pontosabb számolásokhoz az alakváltozási tenzor Green-Lagrange-féle felírását kell használnunk, mely a másodrendű tagjaival kompenzálja az elsőrendű tagok hibáját, így egy merev test forgása esetén is nulla lesz az alakváltozási tenzor. Ennek a formalizmusnak a használatával a rendszer linearitása veszik el.}.
+
+\equref{\epsilon_{ij} = \frac{1}{2}\left(\frac{\partial u_i}{\partial x^j}+\frac{\partial u_j}{\partial x^i}\right)}{eqn:small_strain_tensor}
+
+Itt $\textit{u}$ az anyagi pont elmozdulása a deformálódott és deformáció mentes állapota között. A rugalmas megnyúlás ismeretében meghatározható az anyagban ébredő feszültség is, melynek leírása lineáris anyagok esetében legegyszerűbben a Hook-törvénnyel adható meg.
+
+\equref{\matr{\sigma} = \matr{C} : \matr{\epsilon}_{el}}{eqn:hook}
+
+Az egyenletben $\matr{C}$ az anyag merevségi tenzora, mely megadja az anizotróp anyag rugalmas alakváltozásából származó mechanikai feszültségeket, megengedve a csatolást a normális és nyíró irányú alakváltozások és a hozzájuk tartozó normális és nyíró feszültségek között. A : művelet a tenzorok dupla skaláris szorzata, vagyis index jelölésmódban: $A:B_{ij} = A_{ijkl}B_{kl}$
+
+A mechanikai feszültségek és az elmozdulás között Newton II. egyenlete teremti meg a kapcsolatot, mely differenciális alakban \aref{eqn:newton}. egyenlet szerint írható le. Itt $f_v$ a térfogati erősűrűségeket jelöli.
+
+\equref{\rho \frac{\partial^2 \vec{u}}{\partial t^2} = \div\matr{\sigma} + \vec{f}_v}{eqn:newton}
+
+Ezzel a teljes termomechanikailag csatolt rendszert leíró differenciálegyenlet-rendszer a következőképpen alakul:
+
+\begin{equation}\label{eqn:thermomechanical_eqs}
+    \begin{split}
+        \rho C_p \frac{\partial T}{\partial t} &= \div\lambda \grad T + q \\
+        \matr{\epsilon}_{th} &= \matr{\alpha}(T-T_{ref}) \\
+        \epsilon_{ij} &= \frac{1}{2}\left(\frac{\partial u_i}{\partial x^j}+\frac{\partial u_j}{\partial x^i}\right) \\
+        \matr{\epsilon}_{el} &= \matr{\epsilon} - \matr{\epsilon}_{th} \\
+        \matr{\sigma} &= \matr{C} : \matr{\epsilon}_{el} \\
+        \rho \frac{\partial^2 \vec{u}}{\partial t^2} &= \div(\matr{\sigma}) + \vec{f}_v
+    \end{split}
+\end{equation}
+
+\subsection{Szinuszos állandósult állapot vizsgálata}
+\label{sec:sinusoidal}
+
+\Aref{eqn:thermomechanical_eqs} egyenletrendszer megoldása időigényes feladat, még numerikus számítások esetében is, hiszen egy tranziens folyamatot kell szimulálni, azonban az egyenletrendszert egyszerűsíthetjük, ha kihasználjuk annak linearitását és a periodikus gerjesztés tényét.
+
+A rendszer gerjesztését felbonthatjuk egy állandó és egy szinuszosan változó komponensre. Ezzel a felbontással és a linearitással a rendszer válasza is egy állandó és egy szinuszosan változó komponensre bontható fel. Az állandó gerjesztési komponens számításánál a rendszert tranziens viselkedésétől eltekinthetünk, feltéve, hogy a gerjesztés megkezdésétől elég idő telik el,\footnote{Egy lineáris rendszer állandósult állapotba kerülését a legkisebb abszolútértékű sajátértékével, vagy ami ezzel egyenértékű a legnagyobb időállandójával számíthatjuk. A kis méretű termomechanikus rendszerek esetében ez az időállandó a termikus rendszer időállandója lesz, melyet a termikus ellenállás és a termikus kapacitás szorzataként számolhatunk ki. A maximális időállandó ($\tau$) ismeretével az állandósult állapotot a bekapcsolástól számított $5\tau$ idő elteltével értelmezzük.} ezzel a rendszer időfüggését is elhanyagolhatjuk!
+
+Az állandósult állapot számításakor az időbeli deriváltakat nullával tesszük egyenlővé, így az állandósult komponensekre megoldandó differenciálegyenlet-rendszer a következő alakot ölti:
+
+\begin{equation}\label{thermomechanical_eqs_stat}
+    \begin{split}
+        0 &= \div\lambda \grad T + q \\
+        \matr{\epsilon}_{th} &= \matr{\alpha}(T-T_{ref}) \\
+        \epsilon_{ij} &= \frac{1}{2}\left(\frac{\partial u_i}{\partial x^j}+\frac{\partial u_j}{\partial x^i}\right) \\
+        \matr{\epsilon}_{el} &= \matr{\epsilon} - \matr{\epsilon}_{th} \\
+        \matr{\sigma} &= \matr{C} : \matr{\epsilon}_{el} \\
+        0 &= \div\matr{\sigma} + \vec{f}_v
+    \end{split}
+\end{equation}
+
+A szinuszosan változó komponens leírására bevezetjük a szinuszosan változó jelek komplex csúcsértékeit, más szóval fazorjait. Például az időben szinuszosan változó hőmérséklet helyfüggését a következőképpen adhatjuk meg, ahol $T_c(\vec{r})$ a hőmérséklet helyfüggő komplex amplitúdója:
+
+\equref{T(\vec{r},t) = T(\vec{r}) cos(\omega t+\phi(\vec{r})) = \Re {T_c(\vec{r}) e^{j\omega t}}}{eqn:fazor}
+
+A komplex amplitúdók használatának előnye, hogy az időbeli deriválás egy $j\omega$-val történő szorzással helyettesíthető, felhasználva \aref{eqn:fazor}. egyenletet.
+
+\equref{\frac{d}{dt} T(\vec{r},t) = \Re {j\omega T_c(\vec{r}) e^{j\omega t}}}{eqn:deriv}
+
+A továbbiakban a rendszert leíró különböző mezők (termikus, elmozdulás és mechanikai feszültség) komplex amplitúdókat jelölnek, így ezeket külön nem jelölöm.
+
+\Aref{eqn:thermomechanical_eqs} egyenletrendszerbe behelyettesítve a komplex amplitúdókat és kihasználva az egyenletek linearitását adódik a következő egyenletrendszer:
+
+\begin{equation}\label{eqn:thermomechanical_eqs_complex}
+    \begin{split}
+        j \omega \rho C_p T_c &= \div\lambda \grad T_c + q \\
+        \matr{\epsilon}_{th} &= \matr{\alpha}(T_c-T_{ref}) \\
+        \epsilon_{ij} &= \frac{1}{2}\left(\frac{\partial u_i}{\partial x^j}+\frac{\partial u_j}{\partial x^i}\right) \\
+        \matr{\epsilon}_{el} &= \matr{\epsilon} - \matr{\epsilon}_{th} \\
+        \matr{\sigma} &= \matr{C} : \matr{\epsilon}_{el} \\
+        - \omega^2 \rho \vec{u} &= \div\matr{\sigma} + \vec{f}_v
+    \end{split}
+\end{equation}
+
+A komplex csúcsértékekre való áttéréssel a szinuszosan változó komponens számításánál is elhanyagolhatjuk az időfüggést, és egy frekvenciától függő stacionárius állapot számításával határozhatjuk meg a szinuszosan változó dinamikai komponensek értékeit.
+
+\subsection{Mechanikai rezonancia}
+
+A mérőfej termomechanikus meghajtását tetszőleges $\omega$ frekvencián végezhetjük, azonban a különböző frekvenciákon a rendszer viselkedése jelentősen eltérő lehet. Kis frekvenciák esetén a mérőfej számára rendelkezésre áll elegendő idő, hogy a teljes térfogatában egy állandó hőmérséklet alakuljon ki, a frekvenciát növelve ez a rendelkezésre álló idő csökken, így kialakulhatnak egyenlőtlenségek a hőmérsékleti mezőben. Nagyobb frekvenciákon ezek a különbségek megnőnek, így csökkentve a teljes mérőfej hőmérsékletét, rontva ezzel a termomechanikus meghajtás hatékonyságát. Ebből kifolyólag, azért, hogy nagyobb frekvenciákon is működtetni tudjuk a mérőfejet kihasználjuk a mechanikai szerkezetből adódó rezonanciát.
+
+A rezonanciafrekvencia meghatározásához felhasználjuk \aref{eqn:thermomechanical_eqs_complex}. egyenletrendszer utolsó egyenletét. Az egyenlet megoldásához tételezzük fel, hogy a rendszerre külső erő nem hat\footnote{Ez a feltevés nem valótlan, hiszen a lineáris rendszerek általános megoldásai egy szabad és egy gerjesztett összetevőre bonthatók minden esetben. A felbontás során a szabad összetevőt éppen így határozzuk meg.}, tehát a térfogati erősűrűséget el tudjuk hanyagolni. Az így előálló egyenlet egy sajátprobléma, melynek sajátértéke az egyenletet megoldó rezonanciafrekvencia, míg sajátvektora az adott sajátértékhez tartozó komplex elmozdulás mező, vagy más néven lengéskép. Az egyenletben szereplő lineáris operátor tartalmazza az elmozdulás mezőn végzett hely szerinti deriváltakból és lineáris műveletekből álló transzformációt, melyből megkaphatjuk a lokális erősűrűséget.
+
+\begin{equation}
+    \begin{split}
+        - \rho \omega^2 \vec{u} &= \div\matr{\sigma} \\
+        \lambda \vec{u} &= L(\vec{u})
+    \end{split}
+\end{equation}
+
+A sajátprobléma megoldásához szükséges még megadni az elmozdulás mezőre érvényes peremfeltételeket is, hogy egyértelműen előálljon a megoldásunk. Ez a megoldás erősen függ a rendszer geometriájától, peremfeltételeitől és a rendszerben lévő anyagoktól, így a rezonancia frekvencia számítására szintén numerikus módszereket használok. Egyszerű geometriák esetében a sajátfrekvenciák és lengésképek analitikusan is számolhatók\cite{beam}. Az egyik végén rögzített téglalap keresztmetszetű konzol esetében érvényes összefüggések\cite{cantilever} segítségével a rezonanciafrekvenciát befolyásoló geometriai paraméterek hatása jobban megérthető. Ez a kvalitatív megértés segíti a mérőfej rezonanciafrekvenciájának beállítását az iterációs lépések során. A megfelelő rezonanciafrekvencia megléte egy újabb tervezési szempontot támaszt a méretezendő mérőfejjel szemben.
+
+A rezonanciafrekvencián kívül a hozzá tartozó lengéskép is lényegi információt hordoz, ez a mező határozza meg ugyanis az adott frekvenciájú rezonáns viselkedés térbeli alakját vagyis, hogy hogyan is fog rezegni a struktúra. Ezzel tovább növelve a méretezési szempontok listáját.
+
+\subsection{Mechanikai elmozdulás mérése}
+\label{sec:piezo}
+
+A mérőfej teljesítményének mérésére és ellenőrzésére szükséges annak paramétereit mérni a tesztelés során. Az egyik legfontosabb paraméter, a mérőfej jelén kívül, a rezgetett elektróda vertikális kitérése az idő függvényében. Ez a paraméter az elsődleges mennyiség, mellyel a termomechanikus beavatkozó teljesítménye jellemezhető, ezért a tesztelés során előnyös volna, ha ezt a paramétert is tudnánk mérni a Kelvin-méréssel párhuzamosan. A $\mu m$-es kitérések mérésére egy lehetséges módszer nyúlásmérő bélyegek alkalmazása. Ezen bélyegek a mechanikai feszültségeket alakítják át elektromosan mérhető jelekké. Erre az elektromechanikus átalakításra több fizikai jelenség is felhasználható, többek között a piezoelektromos és piezorezisztív hatások.
+
+Előbbi esetében a mechanikai alakváltozás hatására az piezoelektromos anyag felületén egy elektromos potenciálkülönbség alakul ki, melyet közvetlenül felhasználhatunk az alakváltozás mértékének detektálására. Utóbbi esetben a piezorezisztív anyag fajlagos ellenállása változik meg mechanikai feszültség hatására. A piezoelektromosság magyarázata az anyag kristályrácsának nem nulla elektromos dipólusmomentuma. Az alakváltozás következtében a kristályrács alakja is megváltozik, így a dipólmomentum nagysága is változik vele. A piezorezisztív jelenség mögött az elektromos sávszerkezetek változása áll. Alakváltozás hatására a kristályt alkotó atomok távolságai megváltoznak, így az általuk keltett elektromos potenciál is. Ez a potenciálváltozás megváltoztatja az anyag belsejében lévő vezetési és vegyértéksávokat, ennek következtében a vezetési sávban lévő elektronok száma és azok effektív tömege is megváltozik. Ezen paraméterek pedig közvetlenül befolyásolják az elektromos vezetőképességet, vagy annak reciprokát az elektromos fajlagos ellenállást.
+
+A mérőfej jellegzetességeit figyelembe véve, számunkra a piezorezisztív módszer tűnik alkalmasabbnak. A döntést több tényező is indokolja, egyrészt a mérőfejet CMOS technológiával kompatibilisen szeretnénk megalkotni, így a mérőfejhez felhasznált anyagok csak egy szűk csoportból származhatnak, másrészt a termikus gerjesztés létrehozásához implementálnunk kell egy ellenállást a mérőfejen.
+
+A piezorezisztív jelenség karakterizálására a piezorezisztív együtthatókat használhatjuk. Ezen együtthatók megadják az anyag relatív fajlagos ellenállásának változását egységnyi mechanikai feszültség hatására. Az anyagok kristálytani szerkezetét figyelembe véve nyilvánvaló, hogy nem elegendő egyetlen számmal jellemezni az anyagokat. Ennek magyarázata, hogy általánosan egy anyag mechanikai feszültségállapotát egy másodrendű tenzorral tudjuk leírni, hasonlóképpen az elektromos ellenállás is egy másodrendű tenzorral írható le. Ezen másodrendű tenzorok között egy negyedrendű tenzor teremt kapcsolatot.
+
+\equref{\bf{\rho} = \bf{\Pi}:\bf{\sigma}}{eqn:piezo}
+
+\Aref{eqn:piezo} egyenletben $\rho$ az anyag fajlagos ellenállását leíró tenzor, $\Pi$ a piezorezisztív csatolást leíró tenzor és $\sigma$ a mechanikai feszültségeket leíró másodrendű tenzor. A piezorezisztív jelenség tenzoriális leírásához 81 paraméter kell megadni. Ezen paraméterek természetesen nem teljes mértékben függetlenek egymástól, hiszen az anyag különböző szimmetriáinak meg kell jelenniük. Köbös szimmetriával rendelkező anyagok esetén, ilyen a szilícium kristályrács, a független paraméterek száma 3-ra csökken. Ezeket a paramétereket egy piezorezisztív mátrixba szokás gyűjteni, mely megadja a lineáris kapcsolatot a 6 különböző mechanikai feszültségfajta és a 6 különböző ellenállásfajta között. Ezzel a jelölésmóddal és szimmetriák kihasználásával a piezorezisztív jelenség leírható egy 6x6-s mátrixszal.
+
+\begin{equation}
+    \begin{pmatrix}
+        \Delta\rho_{xx} \\
+        \Delta\rho_{yy} \\
+        \Delta\rho_{zz} \\
+        \Delta\rho_{xy} \\
+        \Delta\rho_{xz} \\
+        \Delta\rho_{yz}
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        \pi_{11} & \pi_{12} & \pi_{12} & 0 & 0 & 0 \\
+        \pi_{12} & \pi_{11} & \pi_{12} & 0 & 0 & 0 \\
+        \pi_{12} & \pi_{12} & \pi_{11} & 0 & 0 & 0 \\
+        0 & 0 & 0 & \pi_{44} & 0 & 0 \\
+        0 & 0 & 0 & 0 & \pi_{44} & 0 \\
+        0 & 0 & 0 & 0 & 0 & \pi_{44}
+    \end{pmatrix}
+    \begin{pmatrix}
+        \sigma_{xx} \\
+        \sigma_{yy} \\
+        \sigma_{zz} \\
+        \sigma_{xy} \\
+        \sigma_{xz} \\
+        \sigma_{yz}
+    \end{pmatrix}
+\end{equation}
+
+Ezt a jelölést alkalmazva csak a rezisztivitások megváltozását fejeztük ki. Ha a piezorezisztív csatolás komponenseibe beépítjük a fajlagos vezetőképességeket is, úgy a mátrixos leírásnál elhagyhatjuk a rezisztivitás tenzor inverzével való szorzást, így a kialakuló összefüggés egyszerűbb alakot ölthet. Természetesen izotróp rezisztivitások esetén a piezorezisztív csatolási mátrix minden komponense csak egy konstanssal lenne elosztva, de anizotróp anyagok esetében ez nem így lenne. Ezzel a jelöléssel a teljes rezisztív konstitúciós egyenlet a következő alakot ölti.
+
+\equref{\bf{E} = (\bf{\rho}+\bf{\Delta\rho})\bf{J}}{eqn:piezo_coupling}
+
+Az anyagok piezorezisztív együtthatói anyagi paraméterek, így azokon változtatni csak az anyag változtatásával lehet, azonban a nyúlásmérő bélyegek esetében előnyös lehet ha a bélyeg a különböző irányú feszültségekre eltérő érzékenységgel válaszol. Ennek egy lehetséges módja a kívánt irányban hosszabban elnyúló bélyeg alkalmazása. Ezzel a módszerrel a relatív ellenállás változást ugyan nem növeltük, viszont az abszolút megváltozást igen. A nyúlásmérő bélyegek kompakttá tétele érdekében lehetőségünk van egy hosszú ellenállás szál helyett több rövidebb párhuzamos szál sorba kapcsolásával elérni kellően nagy ellenállásértéket, az így megvalósított ellenállásokat meanderes ellenállásnak nevezik.
+
+A termikus gerjesztés mérésére a mérőfejen elhelyezett fűtőellenállások feszültségét kell mérjük. Itt előnyünkre szolgál a termikus meghajtás frekvenciaduplázó hatása, miszerint az adott frekvenciájú szinuszos jel csak nulla és a kétszeres frekvencián generál Joule-hőt. Ennek eredményeként az ellenálláson a termikus gerjesztés bemenetét képező és a piezorezisztív mérés kimenetét képező feszültségek frekvenciában elkülönülve jelentkeznek, így nem interferál egymással a két jel az ellenállás kapcsain.
+
+Ez a megoldás könnyen megvalósítható CMOS kapcsolástechnikával a következőképpen. A termikus gerjesztés bemenetét egy földelt source-ú kapcsolás segítségével, a tranzisztor drain áramával állítjuk elő. Ez az áram elsősorban a gate-source feszültség függvénye, a drain feszültségtől csak a kimeneti ellenállásán keresztül függ. A kimeneti ellenállás egy kaszkód tranzisztorral nagyságrendekkel növelhető, így a kapcsolás jó közelítéssel egy ideális feszültségvezérelt áramgenerátorként funkcionál. A fűtőellenállás ennek az áramgenerátornak a drain körébe ültethető be, mint annak terhelése. A piezorezisztív kimeneti jelem szintén a drain körből vehető le egy frekvencia-szelektív erősítőn keresztül. A jel leválasztására használhatnánk egy RC felüláteresztő szűrűt is, azonban a bementi frekvenciakomponensek között csak egy oktáv különbség van, így egy elsőrendű szűrő csak 6 dB csillapítást biztosítana. Műveleti erősítőt alkalmazva nagy jósági tényezőjű sáváteresztő szűrű is készíthető, így nagyobb jel-zaj viszony érhető el ezzel a módszerrel.
+
+\imgsrc{figures/Design/piezo_measure.png}{Piezorezisztív hatás méréstechnikája}{fig:piezo_measure}{0.5}
+
+\subsection{1D Hőmérséklet-eloszlás számítása}
+
+A termikus modell számításához remek intuíciót és egy hasznos mérőszámot ad az egydimenziós hőterjedés számítása.
+
+\imgsrc{figures/Design/1d_heat.png}{Egy dimenziós hőterjedés számítása}{fig:1dheat}{0.5}
+
+A modell elrendezését \aref{fig:1dheat}. ábra mutatja. A modelltartomány térfogatán vegyünk hőforrásmentes hővezetést ($\it{q}$ = 0), a jobb oldali peremen állandó hőmérsékletet (T(L) = $T_0$ konstans) és a bal oldali peremen pedig egy állandó hőfluxust ($-\lambda \grad T_c = P_0$). Ezzel a megoldandó differenciálegyenlet az időben változó komponensre:
+
+\begin{equation}\label{eqn:1d_thermal}
+    \begin{split}
+        j \omega \rho C_p T_c &= \lambda \frac{\partial^2 T_c}{\partial x^2} \\
+        -\lambda \left.\frac{\partial T_c}{\partial x}\right|_{x = 0} &= P_0 \\
+        T_c(L) &= 0
+    \end{split}
+\end{equation}
+
+Az egyenletekben $\rho$ az anyag sűrűsége, $C_p$ az anyag fajlagos hőkapacitása, $T_c$ a hőmérséklet komplex amplitúdója, $\lambda$ az anyag hővezetési tényezője és $P_0$ a konstans hőfluxus. A megoldáshoz vezessük be a $d = \sqrt{\frac{2\lambda}{\omega \rho C_p}}$ távolságot, ezzel a megoldás a következő alakot ölti:
+
+\equref{T_c(x) = C_1 e^{+(1+j)\frac{x}{d}} + C_2 e^{-(1+j)\frac{x}{d}}}{}
+
+Itt $C_1$ és $C_2$ a peremfeltételeknek megfelelő konstansok. A megoldás alakjából látható, hogy bármelyik oldalról gerjesztve a modellt a hőmérséklet időfüggésében egy exponenciálisan lecsengő hőmérséklet-eloszlást tapasztalunk. Az exponenciális csillapítást jellemző karakterisztikus távolságra (d) a továbbiakban a behatolási mélységként fogok hivatkozni.\footnote{Érdekességként megjegyzendő, hogy a hőmérséklet-eloszlás megoldásaként kapott eredmény a fizika más területein is felbukkan az azonos kiindulási differenciálegyenlet miatt. Például a nagyfrekvenciás áramkiszorítás számításánál is hasonló áramsűrűség eloszlást tapasztalhatunk, hiszen mindkét problémát egy Helmholtz-egyenlet írja le.} A paraméterek egy adott értéke melletti\footnote{A paraméterek konkrét értéke az ábrázolás szempontjából nem lényegesek, itt csak a kiadódó megoldás jellemző alakját szerettem volna szemléltetni, valamint a behatolási mélység hatását.} pontos megoldás számítását és annak ábrázolását Matlab-ban végeztem és \aref{fig:1d_sol}. ábrán ábrázoltam.
+
+\imgsrc{figures/Design/1D_heat_result.png}{Az 1 dimenziós hőterjedés megoldása}{fig:1d_sol}{0.75}
+
+\subsection{Termoelasztikus csillapítás}
+
+Az eddigiek során a termikus és mechanikai rendszerek között csak a hőtágulást vezettük be, mint csatolás a különböző fizikai interfészek között, azonban a pontosabb számításokhoz a termoelasztikus csillapítást is figyelembe kell vennünk.
+
+A csillapítás forrása a mechanikai alakváltozás következtében létrejövő hőmérséklet-változás. A mechanikai kompresszió hatására az anyagok felmelegszenek, míg megnyúlás hatására lehűlnek, ez a folyamat alapvetően reverzibilis lenne, ám a hőmérséklet-különbség hatására egy termikus kiegyenlítődési folyamat indul meg, ami a rendszer entrópiáját növeli. Ez az entrópianövekedés a rendszer hasznos mechanikai energiáját csökkenti, vagyis csillapítja azt. Ez a csillapítás egy térfogati hőforrás figyelembevételével modellezhető\cite{thermoelastic_damping}.
+
+\equref{q_{ted} = - T\ \frac{\partial}{\partial t}\ \matr{S}:\matr{\alpha}}{eqn:thermoelastic_damping}
+
+Az egyenletben $q_{ted}$ a termoelasztikus csillapításból származó hőteljesítmény sűrűség és $\matr{S}$ a második Piola-Kirchoff feszültségtenzor\cite{thermoelastic_damping}.
+
+Szinuszos állandósult állapot esetén a termoelasztikus csillapítás a következőképpen fejezhető ki:
+
+\equref{q_{ted} = - j \omega T\ \matr{S}:\matr{\alpha}}{eqn:thermoelastic_damping_complex}
+
+A termomechanikus rendszerek efféle csatolását általában elhanyagolják a hőtágulási együtthatók kis értékei miatt, azonban a működési frekvencia növekedésével a csillapítás összemérhetővé válik a gerjesztéssel.
+
+A számítások és szimulációk során a termoelasztikus csillapításon kívül nem veszünk figyelembe másfajta csillapítást(pl. légellenállást vagy az anyag belső csillapításait és mechanikai veszteségeit).
+
+\subsection{Heterogén rétegszerkezet}
+
+Az eddigiek során az anyagi összetétel változásával nem foglalkoztunk, vagyis izotrópnak tételeztük fel azokat, azonban a MEMS eszközök gyártástechnológiája lehetővé teszi különböző rétegek leválasztását szilíciumlapkákra, így felmerül a kérdés, hogy heterogén rétegszerkezettel javíthatók-e a mechanikai paraméterek. Egy természetesen felmerülő ötlet a különböző hőtágulási együtthatóval rendelkező rétegszerkezet kialakítása. Az ilyen típusú rétegszerkezettel rendelkező struktúrákat általánosan bimorfoknak nevezik. A bimorf anizotropitásának vizsgálatát egy tesztstruktúra szimulálásával végeztem. A tesztstruktúra egy $1000 \mu m $ x $ 40 \mu m $ x $20 \mu m$-es tömb, mely a vastagsága mentén két különböző anyagi részre van osztva egyenletesen. Az elrendezést \aref{fig:bimorph}. ábrán láthatjuk, a felső réteget különböző fémezések alkotják, míg az alsó réteget tömbi szilícium.
+
+A szimuláció során a tesztstruktúrát egyenletes $10^\circ$C-os hőmérséklet-emelkedésnek tettem ki, valamint a hőmérsékleti gradiens hatását is vizsgálva, a tesztstruktúra vastagsága mentén egyenletesen csökkenő hőmérsékletet is szimuláltam $10^\circ$C-ról $0^\circ$C-ra történő változást beállítva. A teszt célja a bimorf anyagi összetételének és a hőmérsékleti gradiensnek az elhajlásra gyakorolt hatásának vizsgálata, így a tesztek során a geometriát változatlannak tekintettem, valamint a teszt eredményéből csak kvalitatív információt szándékoztam gyűjteni, így nem végeztem el különféle geometriai méretek esetén. Referenciának felhasználtam a teljes vastagsága mentén szilíciumból álló, azonos geometriai méretekkel rendelkező tömböt.
+
+Az eredmények \aref{fig:bimorph_results}. ábrán láthatók. A szimulációból látszik, hogy az alumínium- és a rézbevonat eredményezi a legnagyobb elhajlást, így ezeket célszerű használni. Nem szabad elfelejteni azonban azt, hogy az anyagválasztást gyárthatósági szempontok is befolyásolják! Mivel a mérőfejet a BME Félvezetőtechnológia és Megbízhatósági Laboratóriumban található tisztatérben szeretnénk legyártani, így az ott rendelkezésünkre álló eszközökkel kell a rétegfelvitelt megoldani. Vastagrétegek felvitelére, fémek esetén, a galvanizálás egy járható út, azonban az alumínium nem galvanizálható, így a bevonat anyagának rezet célszerű választani. Ennek tudatában a további szimulációk során a mérőfej kialakításakor egy szilíciumból és rézből álló bimorfot fogunk felhasználni, mint aktív eszköz a termikus beavatkozóban.
+
+\imgsrclr{figures/Design/Bimorph_mat_config.png}{figures/Design/Bimorph_results.png}{Bimorf tesztstruktúra}{Bimorf anyagának hatása az elhajlásra}{fig:bimorph}{fig:bimorph_results}{1}{1}

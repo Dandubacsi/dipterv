@@ -1,0 +1,18 @@
+[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
+[1] Config.pm:307> INFO - Logfile is 'dipterv.blg'
+[65] biber:322> INFO - === v máj 29, 2022, 00:57:57
+[78] Biber.pm:415> INFO - Reading 'dipterv.bcf'
+[135] Biber.pm:943> INFO - Found 46 citekeys in bib section 0
+[148] Biber.pm:4256> INFO - Processing section 0
+[149] Utils.pm:75> INFO - Globbing data source 'bib/mybib.bib'
+[149] Utils.pm:91> INFO - Globbed data source 'bib/mybib.bib' to bib/mybib.bib
+[157] Biber.pm:4455> INFO - Looking for bibtex format file 'bib/mybib.bib' for section 0
+[160] bibtex.pm:1653> INFO - LaTeX decoding ...
+[211] bibtex.pm:1471> INFO - Found BibTeX data source 'bib/mybib.bib'
+[273] Utils.pm:293> WARN - ISBN '978-981-13-7603-0' in entry 'brai' is invalid - run biber with '--validate_datamodel' for details.
+[422] UCollate.pm:68> INFO - Overriding locale 'hu-HU' defaults 'variable = shifted' with 'variable = non-ignorable'
+[422] UCollate.pm:68> INFO - Overriding locale 'hu-HU' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[422] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'hu-HU'
+[458] bbl.pm:652> INFO - Writing 'dipterv.bbl' with encoding 'UTF-8'
+[482] bbl.pm:755> INFO - Output to dipterv.bbl
+[482] Biber.pm:128> INFO - WARNINGS: 1
